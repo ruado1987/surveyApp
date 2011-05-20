@@ -1,0 +1,31 @@
+Testsuite: exp.UserOpinionSpec
+Tests run: 3, Failures: 1, Errors: 0, Time elapsed: 0.187 sec
+------------- Standard Output ---------------
+--Output from test constraints on scalar value--
+--Output from test constraints on association value--
+--Output from test constraint on collection value--
+------------- ---------------- ---------------
+------------- Standard Error -----------------
+--Output from test constraints on scalar value--
+--Output from test constraints on association value--
+--Output from test constraint on collection value--
+------------- ---------------- ---------------
+
+Testcase: test constraints on scalar value took 0.121 sec
+Testcase: test constraints on association value took 0.023 sec
+Testcase: test constraint on collection value took 0.029 sec
+	FAILED
+Condition not satisfied:
+
+expectedResult == result
+
+Validation result of _[, , , , ]_ is not as expected
+
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+expectedResult == result
+
+Validation result of _[, , , , ]_ is not as expected
+
+	at exp.UserOpinionSpec.test constraint on collection value(UserOpinionSpec.groovy:44)
+

@@ -1,0 +1,4 @@
+--Output from test constraints on scalar value--
+--Output from test constraints on association value--
+--Output from test constraint on collection value--
+

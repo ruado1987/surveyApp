@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="1" hostname="ruado-laptop" name="exp.UserOpinionSpec" tests="3" time="0.187" timestamp="2011-05-19T17:22:05">
+  <properties />
+  <testcase classname="exp.UserOpinionSpec" name="test constraints on scalar value" time="0.121" />
+  <testcase classname="exp.UserOpinionSpec" name="test constraints on association value" time="0.023" />
+  <testcase classname="exp.UserOpinionSpec" name="test constraint on collection value" time="0.042">
+    <failure message="Condition not satisfied:
+
+expectedResult == result
+
+Validation result of _[, , , , ]_ is not as expected
+" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Condition not satisfied:
+
+expectedResult == result
+
+Validation result of _[, , , , ]_ is not as expected
+
+	at exp.UserOpinionSpec.test constraint on collection value(UserOpinionSpec.groovy:44)
+</failure>
+  </testcase>
+  <system-out><![CDATA[--Output from test constraints on scalar value--
+--Output from test constraints on association value--
+--Output from test constraint on collection value--
+]]></system-out>
+  <system-err><![CDATA[--Output from test constraints on scalar value--
+--Output from test constraints on association value--
+--Output from test constraint on collection value--
+]]></system-err>
+</testsuite>
