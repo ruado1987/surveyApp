@@ -96,11 +96,13 @@ class SurveyControllerSpec extends ControllerSpec {
             mockDomain UserOpinion
             mockDomain Survey, [new Survey(id: 1, name: 'a survey', questions: questionList())]
             mockDomain Question, questionList()
+            controller.params.surveyId = 1
          when:
             controller.saveUserOpinion()
          then:
             'renderSurvey' == renderArgs.view
             controller.flash.message
+            renderArgs.model.survey
     }
 
     def 'test extract answers from params map' () {
@@ -108,10 +110,12 @@ class SurveyControllerSpec extends ControllerSpec {
             def result = controller.extractFromParams(['answer_1': 'some text',
                                       'answer_2': 'another text',
                                       'answer_3': 'yet another text',
+                                      //a regression test value
+                                      'answer_10': 'answer for a 2 digit question',
                                       'not answer': 'ohho'])
         then:
-            3 == result.size()
-            [1: 'some text', 2: 'another text', 3: 'yet another text'] == result
+            4 == result.size()
+            [1: 'some text', 2: 'another text', 3: 'yet another text', 10: 'answer for a 2 digit question'] == result
     }
 
     def 'test thanks action'() {

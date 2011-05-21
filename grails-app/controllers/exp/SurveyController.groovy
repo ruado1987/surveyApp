@@ -47,8 +47,8 @@ class SurveyController {
         if(result) {
              redirect(action: 'thanks', params: [opinionId: uo.id])
         }else{
-             flash.message = 'Please choose a survey or choose answers for all questions'
-             render(view: 'renderSurvey')
+             flash.message = 'Please choose a survey or provide answers for all questions'
+             render(view: 'renderSurvey', model: [survey: survey])
         }
     }
 
@@ -63,7 +63,7 @@ class SurveyController {
 
     protected extractFromParams(params){
         def prefix = 'answer_'
-        def pattern = ~/answer_\d/
+        def pattern = ~/answer_\d+/
         def notAnswers = params.collect {k, v->
             if(!(pattern.matcher(k).matches())) {
                 k

@@ -3008,3 +3008,101 @@ java.lang.IllegalArgumentException: url '505' did not match any mappings
 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
 	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
 	at org.junit.runners.ParentRunner$run.call(Unknown Source)
+2011-05-21 12:10:27,011 [main] ERROR StackTrace  - Sanitizing stacktrace:
+grails.validation.ValidationException: Validation Error(s) occurred during save():
+- Field error in object 'exp.UserOpinion' on field 'answers': rejected value [[exp.Answer : 4, exp.Answer : 6, exp.Answer : 5, exp.Answer : 7, exp.Answer : 8, exp.Answer : 3, exp.Answer : 2, exp.Answer : 9]]; codes [exp.UserOpinion.answers.validator.error.exp.UserOpinion.answers,exp.UserOpinion.answers.validator.error.answers,exp.UserOpinion.answers.validator.error.java.util.Set,exp.UserOpinion.answers.validator.error,userOpinion.answers.validator.error.exp.UserOpinion.answers,userOpinion.answers.validator.error.answers,userOpinion.answers.validator.error.java.util.Set,userOpinion.answers.validator.error,exp.UserOpinion.answers.validator.invalid.exp.UserOpinion.answers,exp.UserOpinion.answers.validator.invalid.answers,exp.UserOpinion.answers.validator.invalid.java.util.Set,exp.UserOpinion.answers.validator.invalid,userOpinion.answers.validator.invalid.exp.UserOpinion.answers,userOpinion.answers.validator.invalid.answers,userOpinion.answers.validator.invalid.java.util.Set,userOpinion.answers.validator.invalid,validator.invalid.exp.UserOpinion.answers,validator.invalid.answers,validator.invalid.java.util.Set,validator.invalid]; arguments [answers,class exp.UserOpinion,[exp.Answer : 4, exp.Answer : 6, exp.Answer : 5, exp.Answer : 7, exp.Answer : 8, exp.Answer : 3, exp.Answer : 2, exp.Answer : 9]]; default message [Property [{0}] of class [{1}] with value [{2}] does not pass custom validation]
+
+	at org.codehaus.groovy.grails.orm.hibernate.metaclass.AbstractSavePersistentMethod.doInvokeInternal(AbstractSavePersistentMethod.java:149)
+	at org.codehaus.groovy.grails.orm.hibernate.metaclass.AbstractDynamicPersistentMethod.invoke(AbstractDynamicPersistentMethod.java:59)
+	at org.codehaus.groovy.grails.plugins.orm.hibernate.HibernatePluginSupport.addBasicPersistenceMethods_closure71(HibernatePluginSupport.groovy:806)
+	at org.codehaus.groovy.grails.plugins.orm.hibernate.HibernatePluginSupport.enhanceSessionFactory_closure13(HibernatePluginSupport.groovy:376)
+	at grails.plugin.fixtures.builder.processor.FixtureBeanPostProcessor.postProcessAfterInitialization(FixtureBeanPostProcessor.groovy:98)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:407)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1426)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:580)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425)
+	at org.codehaus.groovy.grails.commons.spring.DefaultRuntimeSpringConfiguration.getApplicationContext(DefaultRuntimeSpringConfiguration.java:154)
+	at grails.spring.BeanBuilder.createApplicationContext(BeanBuilder.java:582)
+	at grails.plugin.fixtures.builder.FixtureBuilder.createApplicationContext(FixtureBuilder.groovy:139)
+	at grails.plugin.fixtures.Fixture.load(Fixture.groovy:39)
+	at grails.plugin.fixtures.FixtureLoader.doLoad(FixtureLoader.groovy:50)
+	at grails.plugin.fixtures.FixtureLoader.load(FixtureLoader.groovy:42)
+	at exp.UserOpinionIntegrationSpec.test save new user opinion(UserOpinionIntegrationSpec.groovy:11)
+2011-05-21 12:10:27,063 [main] ERROR StackTrace  - Sanitizing stacktrace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'uo': Initialization of bean failed; nested exception is grails.validation.ValidationException: Validation Error(s) occurred during save():
+- Field error in object 'exp.UserOpinion' on field 'answers': rejected value [[exp.Answer : 4, exp.Answer : 6, exp.Answer : 5, exp.Answer : 7, exp.Answer : 8, exp.Answer : 3, exp.Answer : 2, exp.Answer : 9]]; codes [exp.UserOpinion.answers.validator.error.exp.UserOpinion.answers,exp.UserOpinion.answers.validator.error.answers,exp.UserOpinion.answers.validator.error.java.util.Set,exp.UserOpinion.answers.validator.error,userOpinion.answers.validator.error.exp.UserOpinion.answers,userOpinion.answers.validator.error.answers,userOpinion.answers.validator.error.java.util.Set,userOpinion.answers.validator.error,exp.UserOpinion.answers.validator.invalid.exp.UserOpinion.answers,exp.UserOpinion.answers.validator.invalid.answers,exp.UserOpinion.answers.validator.invalid.java.util.Set,exp.UserOpinion.answers.validator.invalid,userOpinion.answers.validator.invalid.exp.UserOpinion.answers,userOpinion.answers.validator.invalid.answers,userOpinion.answers.validator.invalid.java.util.Set,userOpinion.answers.validator.invalid,validator.invalid.exp.UserOpinion.answers,validator.invalid.answers,validator.invalid.java.util.Set,validator.invalid]; arguments [answers,class exp.UserOpinion,[exp.Answer : 4, exp.Answer : 6, exp.Answer : 5, exp.Answer : 7, exp.Answer : 8, exp.Answer : 3, exp.Answer : 2, exp.Answer : 9]]; default message [Property [{0}] of class [{1}] with value [{2}] does not pass custom validation]
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:527)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:580)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425)
+	at org.codehaus.groovy.grails.commons.spring.DefaultRuntimeSpringConfiguration.getApplicationContext(DefaultRuntimeSpringConfiguration.java:154)
+	at grails.spring.BeanBuilder.createApplicationContext(BeanBuilder.java:582)
+	at grails.plugin.fixtures.builder.FixtureBuilder.createApplicationContext(FixtureBuilder.groovy:139)
+	at grails.plugin.fixtures.Fixture.load(Fixture.groovy:39)
+	at grails.plugin.fixtures.FixtureLoader.doLoad(FixtureLoader.groovy:50)
+	at grails.plugin.fixtures.FixtureLoader.load(FixtureLoader.groovy:42)
+	at exp.UserOpinionIntegrationSpec.test save new user opinion(UserOpinionIntegrationSpec.groovy:11)
+Caused by: grails.validation.ValidationException: Validation Error(s) occurred during save():
+- Field error in object 'exp.UserOpinion' on field 'answers': rejected value [[exp.Answer : 4, exp.Answer : 6, exp.Answer : 5, exp.Answer : 7, exp.Answer : 8, exp.Answer : 3, exp.Answer : 2, exp.Answer : 9]]; codes [exp.UserOpinion.answers.validator.error.exp.UserOpinion.answers,exp.UserOpinion.answers.validator.error.answers,exp.UserOpinion.answers.validator.error.java.util.Set,exp.UserOpinion.answers.validator.error,userOpinion.answers.validator.error.exp.UserOpinion.answers,userOpinion.answers.validator.error.answers,userOpinion.answers.validator.error.java.util.Set,userOpinion.answers.validator.error,exp.UserOpinion.answers.validator.invalid.exp.UserOpinion.answers,exp.UserOpinion.answers.validator.invalid.answers,exp.UserOpinion.answers.validator.invalid.java.util.Set,exp.UserOpinion.answers.validator.invalid,userOpinion.answers.validator.invalid.exp.UserOpinion.answers,userOpinion.answers.validator.invalid.answers,userOpinion.answers.validator.invalid.java.util.Set,userOpinion.answers.validator.invalid,validator.invalid.exp.UserOpinion.answers,validator.invalid.answers,validator.invalid.java.util.Set,validator.invalid]; arguments [answers,class exp.UserOpinion,[exp.Answer : 4, exp.Answer : 6, exp.Answer : 5, exp.Answer : 7, exp.Answer : 8, exp.Answer : 3, exp.Answer : 2, exp.Answer : 9]]; default message [Property [{0}] of class [{1}] with value [{2}] does not pass custom validation]
+
+	at grails.plugin.fixtures.builder.processor.FixtureBeanPostProcessor.postProcessAfterInitialization(FixtureBeanPostProcessor.groovy:98)
+	... 6 more
+2011-05-21 12:10:27,077 [main] ERROR StackTrace  - Sanitizing stacktrace:
+grails.validation.ValidationException: Validation Error(s) occurred during save():
+- Field error in object 'exp.UserOpinion' on field 'answers': rejected value [[exp.Answer : 4, exp.Answer : 6, exp.Answer : 5, exp.Answer : 7, exp.Answer : 8, exp.Answer : 3, exp.Answer : 2, exp.Answer : 9]]; codes [exp.UserOpinion.answers.validator.error.exp.UserOpinion.answers,exp.UserOpinion.answers.validator.error.answers,exp.UserOpinion.answers.validator.error.java.util.Set,exp.UserOpinion.answers.validator.error,userOpinion.answers.validator.error.exp.UserOpinion.answers,userOpinion.answers.validator.error.answers,userOpinion.answers.validator.error.java.util.Set,userOpinion.answers.validator.error,exp.UserOpinion.answers.validator.invalid.exp.UserOpinion.answers,exp.UserOpinion.answers.validator.invalid.answers,exp.UserOpinion.answers.validator.invalid.java.util.Set,exp.UserOpinion.answers.validator.invalid,userOpinion.answers.validator.invalid.exp.UserOpinion.answers,userOpinion.answers.validator.invalid.answers,userOpinion.answers.validator.invalid.java.util.Set,userOpinion.answers.validator.invalid,validator.invalid.exp.UserOpinion.answers,validator.invalid.answers,validator.invalid.java.util.Set,validator.invalid]; arguments [answers,class exp.UserOpinion,[exp.Answer : 4, exp.Answer : 6, exp.Answer : 5, exp.Answer : 7, exp.Answer : 8, exp.Answer : 3, exp.Answer : 2, exp.Answer : 9]]; default message [Property [{0}] of class [{1}] with value [{2}] does not pass custom validation]
+
+	at grails.plugin.fixtures.builder.processor.FixtureBeanPostProcessor.postProcessAfterInitialization(FixtureBeanPostProcessor.groovy:98)
+	at grails.spring.BeanBuilder.createApplicationContext(BeanBuilder.java:582)
+	at grails.plugin.fixtures.builder.FixtureBuilder.createApplicationContext(FixtureBuilder.groovy:139)
+	at grails.plugin.fixtures.Fixture.load(Fixture.groovy:39)
+	at grails.plugin.fixtures.FixtureLoader.doLoad(FixtureLoader.groovy:50)
+	at grails.plugin.fixtures.FixtureLoader.load(FixtureLoader.groovy:42)
+	at exp.UserOpinionIntegrationSpec.test save new user opinion(UserOpinionIntegrationSpec.groovy:11)
+2011-05-21 12:10:27,078 [main] ERROR StackTrace  - Sanitizing stacktrace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'uo': Initialization of bean failed; nested exception is grails.validation.ValidationException: Validation Error(s) occurred during save():
+- Field error in object 'exp.UserOpinion' on field 'answers': rejected value [[exp.Answer : 4, exp.Answer : 6, exp.Answer : 5, exp.Answer : 7, exp.Answer : 8, exp.Answer : 3, exp.Answer : 2, exp.Answer : 9]]; codes [exp.UserOpinion.answers.validator.error.exp.UserOpinion.answers,exp.UserOpinion.answers.validator.error.answers,exp.UserOpinion.answers.validator.error.java.util.Set,exp.UserOpinion.answers.validator.error,userOpinion.answers.validator.error.exp.UserOpinion.answers,userOpinion.answers.validator.error.answers,userOpinion.answers.validator.error.java.util.Set,userOpinion.answers.validator.error,exp.UserOpinion.answers.validator.invalid.exp.UserOpinion.answers,exp.UserOpinion.answers.validator.invalid.answers,exp.UserOpinion.answers.validator.invalid.java.util.Set,exp.UserOpinion.answers.validator.invalid,userOpinion.answers.validator.invalid.exp.UserOpinion.answers,userOpinion.answers.validator.invalid.answers,userOpinion.answers.validator.invalid.java.util.Set,userOpinion.answers.validator.invalid,validator.invalid.exp.UserOpinion.answers,validator.invalid.answers,validator.invalid.java.util.Set,validator.invalid]; arguments [answers,class exp.UserOpinion,[exp.Answer : 4, exp.Answer : 6, exp.Answer : 5, exp.Answer : 7, exp.Answer : 8, exp.Answer : 3, exp.Answer : 2, exp.Answer : 9]]; default message [Property [{0}] of class [{1}] with value [{2}] does not pass custom validation]
+
+	at grails.spring.BeanBuilder.createApplicationContext(BeanBuilder.java:582)
+	at grails.plugin.fixtures.builder.FixtureBuilder.createApplicationContext(FixtureBuilder.groovy:139)
+	at grails.plugin.fixtures.Fixture.load(Fixture.groovy:39)
+	at grails.plugin.fixtures.FixtureLoader.doLoad(FixtureLoader.groovy:50)
+	at grails.plugin.fixtures.FixtureLoader.load(FixtureLoader.groovy:42)
+	at exp.UserOpinionIntegrationSpec.test save new user opinion(UserOpinionIntegrationSpec.groovy:11)
+Caused by: grails.validation.ValidationException: Validation Error(s) occurred during save():
+- Field error in object 'exp.UserOpinion' on field 'answers': rejected value [[exp.Answer : 4, exp.Answer : 6, exp.Answer : 5, exp.Answer : 7, exp.Answer : 8, exp.Answer : 3, exp.Answer : 2, exp.Answer : 9]]; codes [exp.UserOpinion.answers.validator.error.exp.UserOpinion.answers,exp.UserOpinion.answers.validator.error.answers,exp.UserOpinion.answers.validator.error.java.util.Set,exp.UserOpinion.answers.validator.error,userOpinion.answers.validator.error.exp.UserOpinion.answers,userOpinion.answers.validator.error.answers,userOpinion.answers.validator.error.java.util.Set,userOpinion.answers.validator.error,exp.UserOpinion.answers.validator.invalid.exp.UserOpinion.answers,exp.UserOpinion.answers.validator.invalid.answers,exp.UserOpinion.answers.validator.invalid.java.util.Set,exp.UserOpinion.answers.validator.invalid,userOpinion.answers.validator.invalid.exp.UserOpinion.answers,userOpinion.answers.validator.invalid.answers,userOpinion.answers.validator.invalid.java.util.Set,userOpinion.answers.validator.invalid,validator.invalid.exp.UserOpinion.answers,validator.invalid.answers,validator.invalid.java.util.Set,validator.invalid]; arguments [answers,class exp.UserOpinion,[exp.Answer : 4, exp.Answer : 6, exp.Answer : 5, exp.Answer : 7, exp.Answer : 8, exp.Answer : 3, exp.Answer : 2, exp.Answer : 9]]; default message [Property [{0}] of class [{1}] with value [{2}] does not pass custom validation]
+
+	at grails.plugin.fixtures.builder.processor.FixtureBeanPostProcessor.postProcessAfterInitialization(FixtureBeanPostProcessor.groovy:98)
+	... 6 more
+2011-05-21 12:12:28,770 [main] ERROR StackTrace  - Sanitizing stacktrace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+8 == uo.answers.size()
+  |  |  |       |
+  |  |  |       10
+  |  |  [exp.Answer : 1, exp.Answer : 8, exp.Answer : 6, exp.Answer : 4, exp.Answer : 5, exp.Answer : 9, exp.Answer : 3, exp.Answer : 2, exp.Answer : 10, exp.Answer : 7]
+  |  exp.UserOpinion : 1
+  false
+
+	at exp.UserOpinionIntegrationSpec.test save new user opinion(UserOpinionIntegrationSpec.groovy:36)
+2011-05-21 12:12:28,788 [main] ERROR StackTrace  - Sanitizing stacktrace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+8 == uo.answers.size()
+  |  |  |       |
+  |  |  |       10
+  |  |  [exp.Answer : 1, exp.Answer : 8, exp.Answer : 6, exp.Answer : 4, exp.Answer : 5, exp.Answer : 9, exp.Answer : 3, exp.Answer : 2, exp.Answer : 10, exp.Answer : 7]
+  |  exp.UserOpinion : 1
+  false
+
+	at exp.UserOpinionIntegrationSpec.test save new user opinion(UserOpinionIntegrationSpec.groovy:36)

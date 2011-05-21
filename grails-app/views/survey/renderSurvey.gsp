@@ -62,29 +62,30 @@
           .errorMsg {
               color: red;
               font: 14px sans-serif;
+              margin-bottom: 10px;
           }
       </style>
   </head>
   <body>
-        <span class="headerMsg">Your are taking a survey: ${survey.name}</span>
+        <span class="headerMsg">Your are taking a survey: ${survey?.name}</span>
         <span class="headerMsg1">Please take your valuable time to answer the following questions</span>
         <g:if test="${flash.message}">
             <p class="errorMsg">${flash.message}</p>
         </g:if>
         <g:form action="saveUserOpinion">
             <dl>
-                <g:hiddenField name="surveyId" value="${survey.id}"/>
-                <g:each in="${survey.questions}" var="question" status="num">
+                <g:hiddenField name="surveyId" value="${survey?.id}"/>
+                <g:each in="${survey?.questions}" var="question" status="num">
                     <dt>
-                        <span class="questionText">${num + 1}. ${question.text}</span>
-                        <g:if test="${question.options}">
-                            <g:set var="optionList" value="${question.options as List}"/>
+                        <span class="questionText">${num + 1}. ${question?.text}</span>
+                        <g:if test="${question?.options}">
+                            <g:set var="optionList" value="${question.options}"/>
                             <div class="answerList">
-                                <g:radioGroup name="answer_${question.id}"
+                                <g:radioGroup name="answer_${question?.id}"
                                               values="${optionList}"
                                               labels="${optionList}"
                                               value="${optionList[0]}">
-                                    <span class="questionAnswer">${it.radio} ${it.label}</span>
+                                    <span class="questionAnswer">${it?.radio} ${it?.label}</span>
                                 </g:radioGroup>
                             </div>
                         </g:if>

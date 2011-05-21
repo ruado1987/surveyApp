@@ -45,13 +45,13 @@ class UserOpinionSpec extends UnitSpec {
             assert expectedResult == result, "Validation result of _${answers.text}_ is not as expected"
             validator == uo.errors['answers']
         where:
-            answers << [answerList(), [],emptyAnswerList(),
+            answers << [answerList(), [], emptyAnswerList(),
                         answerList() << new Answer(
                             text: 'a reply',
                             question: new Question(text: 'a question'))
             ]
-            expectedResult << [true, false, false, false]
-            validator << [null, 'validator', 'validator', 'validator']
+            expectedResult << [true, false, true, false]
+            validator << [null, 'validator', null, 'validator']
     }
 
     private newSurvey() {
