@@ -83,8 +83,7 @@
                             <div class="answerList">
                                 <g:radioGroup name="answer_${question?.id}"
                                               values="${optionList}"
-                                              labels="${optionList}"
-                                              value="${optionList[0]}">
+                                              labels="${optionList}">
                                     <span class="questionAnswer">${it?.radio} ${it?.label}</span>
                                 </g:radioGroup>
                             </div>
