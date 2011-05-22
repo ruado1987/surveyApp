@@ -3106,3 +3106,1046 @@ junit.framework.AssertionFailedError: Condition not satisfied:
   false
 
 	at exp.UserOpinionIntegrationSpec.test save new user opinion(UserOpinionIntegrationSpec.groovy:36)
+2011-05-22 18:32:33,491 [main] ERROR StackTrace  - Sanitizing stacktrace:
+grails.validation.ValidationException: Validation Error(s) occurred during save():
+- Field error in object 'exp.Answer' on field 'question': rejected value [null]; codes [exp.Answer.question.nullable.error.exp.Answer.question,exp.Answer.question.nullable.error.question,exp.Answer.question.nullable.error.exp.Question,exp.Answer.question.nullable.error,answer.question.nullable.error.exp.Answer.question,answer.question.nullable.error.question,answer.question.nullable.error.exp.Question,answer.question.nullable.error,exp.Answer.question.nullable.exp.Answer.question,exp.Answer.question.nullable.question,exp.Answer.question.nullable.exp.Question,exp.Answer.question.nullable,answer.question.nullable.exp.Answer.question,answer.question.nullable.question,answer.question.nullable.exp.Question,answer.question.nullable,nullable.exp.Answer.question,nullable.question,nullable.exp.Question,nullable]; arguments [question,class exp.Answer]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'exp.Answer' on field 'text': rejected value [null]; codes [exp.Answer.text.nullable.error.exp.Answer.text,exp.Answer.text.nullable.error.text,exp.Answer.text.nullable.error.java.lang.String,exp.Answer.text.nullable.error,answer.text.nullable.error.exp.Answer.text,answer.text.nullable.error.text,answer.text.nullable.error.java.lang.String,answer.text.nullable.error,exp.Answer.text.nullable.exp.Answer.text,exp.Answer.text.nullable.text,exp.Answer.text.nullable.java.lang.String,exp.Answer.text.nullable,answer.text.nullable.exp.Answer.text,answer.text.nullable.text,answer.text.nullable.java.lang.String,answer.text.nullable,nullable.exp.Answer.text,nullable.text,nullable.java.lang.String,nullable]; arguments [text,class exp.Answer]; default message [Property [{0}] of class [{1}] cannot be null]
+
+	at org.codehaus.groovy.grails.orm.hibernate.metaclass.AbstractSavePersistentMethod.doInvokeInternal(AbstractSavePersistentMethod.java:149)
+	at org.codehaus.groovy.grails.orm.hibernate.metaclass.AbstractDynamicPersistentMethod.invoke(AbstractDynamicPersistentMethod.java:59)
+	at org.codehaus.groovy.grails.plugins.orm.hibernate.HibernatePluginSupport.addBasicPersistenceMethods_closure71(HibernatePluginSupport.groovy:806)
+	at grails.plugin.fixtures.builder.processor.FixtureBeanPostProcessor.postProcessAfterInitialization(FixtureBeanPostProcessor.groovy:98)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:407)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1426)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:580)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425)
+	at org.codehaus.groovy.grails.commons.spring.DefaultRuntimeSpringConfiguration.getApplicationContext(DefaultRuntimeSpringConfiguration.java:154)
+	at grails.spring.BeanBuilder.createApplicationContext(BeanBuilder.java:582)
+	at grails.plugin.fixtures.builder.FixtureBuilder.createApplicationContext(FixtureBuilder.groovy:139)
+	at grails.plugin.fixtures.Fixture.load(Fixture.groovy:39)
+	at grails.plugin.fixtures.FixtureLoader.doLoad(FixtureLoader.groovy:50)
+	at grails.plugin.fixtures.FixtureLoader.load(FixtureLoader.groovy:42)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions(UserOpinionIntegrationSpec.groovy:41)
+2011-05-22 18:32:33,533 [main] ERROR StackTrace  - Sanitizing stacktrace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'answer3': Initialization of bean failed; nested exception is grails.validation.ValidationException: Validation Error(s) occurred during save():
+- Field error in object 'exp.Answer' on field 'question': rejected value [null]; codes [exp.Answer.question.nullable.error.exp.Answer.question,exp.Answer.question.nullable.error.question,exp.Answer.question.nullable.error.exp.Question,exp.Answer.question.nullable.error,answer.question.nullable.error.exp.Answer.question,answer.question.nullable.error.question,answer.question.nullable.error.exp.Question,answer.question.nullable.error,exp.Answer.question.nullable.exp.Answer.question,exp.Answer.question.nullable.question,exp.Answer.question.nullable.exp.Question,exp.Answer.question.nullable,answer.question.nullable.exp.Answer.question,answer.question.nullable.question,answer.question.nullable.exp.Question,answer.question.nullable,nullable.exp.Answer.question,nullable.question,nullable.exp.Question,nullable]; arguments [question,class exp.Answer]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'exp.Answer' on field 'text': rejected value [null]; codes [exp.Answer.text.nullable.error.exp.Answer.text,exp.Answer.text.nullable.error.text,exp.Answer.text.nullable.error.java.lang.String,exp.Answer.text.nullable.error,answer.text.nullable.error.exp.Answer.text,answer.text.nullable.error.text,answer.text.nullable.error.java.lang.String,answer.text.nullable.error,exp.Answer.text.nullable.exp.Answer.text,exp.Answer.text.nullable.text,exp.Answer.text.nullable.java.lang.String,exp.Answer.text.nullable,answer.text.nullable.exp.Answer.text,answer.text.nullable.text,answer.text.nullable.java.lang.String,answer.text.nullable,nullable.exp.Answer.text,nullable.text,nullable.java.lang.String,nullable]; arguments [text,class exp.Answer]; default message [Property [{0}] of class [{1}] cannot be null]
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:527)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:580)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425)
+	at org.codehaus.groovy.grails.commons.spring.DefaultRuntimeSpringConfiguration.getApplicationContext(DefaultRuntimeSpringConfiguration.java:154)
+	at grails.spring.BeanBuilder.createApplicationContext(BeanBuilder.java:582)
+	at grails.plugin.fixtures.builder.FixtureBuilder.createApplicationContext(FixtureBuilder.groovy:139)
+	at grails.plugin.fixtures.Fixture.load(Fixture.groovy:39)
+	at grails.plugin.fixtures.FixtureLoader.doLoad(FixtureLoader.groovy:50)
+	at grails.plugin.fixtures.FixtureLoader.load(FixtureLoader.groovy:42)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions(UserOpinionIntegrationSpec.groovy:41)
+Caused by: grails.validation.ValidationException: Validation Error(s) occurred during save():
+- Field error in object 'exp.Answer' on field 'question': rejected value [null]; codes [exp.Answer.question.nullable.error.exp.Answer.question,exp.Answer.question.nullable.error.question,exp.Answer.question.nullable.error.exp.Question,exp.Answer.question.nullable.error,answer.question.nullable.error.exp.Answer.question,answer.question.nullable.error.question,answer.question.nullable.error.exp.Question,answer.question.nullable.error,exp.Answer.question.nullable.exp.Answer.question,exp.Answer.question.nullable.question,exp.Answer.question.nullable.exp.Question,exp.Answer.question.nullable,answer.question.nullable.exp.Answer.question,answer.question.nullable.question,answer.question.nullable.exp.Question,answer.question.nullable,nullable.exp.Answer.question,nullable.question,nullable.exp.Question,nullable]; arguments [question,class exp.Answer]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'exp.Answer' on field 'text': rejected value [null]; codes [exp.Answer.text.nullable.error.exp.Answer.text,exp.Answer.text.nullable.error.text,exp.Answer.text.nullable.error.java.lang.String,exp.Answer.text.nullable.error,answer.text.nullable.error.exp.Answer.text,answer.text.nullable.error.text,answer.text.nullable.error.java.lang.String,answer.text.nullable.error,exp.Answer.text.nullable.exp.Answer.text,exp.Answer.text.nullable.text,exp.Answer.text.nullable.java.lang.String,exp.Answer.text.nullable,answer.text.nullable.exp.Answer.text,answer.text.nullable.text,answer.text.nullable.java.lang.String,answer.text.nullable,nullable.exp.Answer.text,nullable.text,nullable.java.lang.String,nullable]; arguments [text,class exp.Answer]; default message [Property [{0}] of class [{1}] cannot be null]
+
+	at grails.plugin.fixtures.builder.processor.FixtureBeanPostProcessor.postProcessAfterInitialization(FixtureBeanPostProcessor.groovy:98)
+	... 6 more
+2011-05-22 18:32:33,541 [main] ERROR StackTrace  - Sanitizing stacktrace:
+grails.validation.ValidationException: Validation Error(s) occurred during save():
+- Field error in object 'exp.Answer' on field 'question': rejected value [null]; codes [exp.Answer.question.nullable.error.exp.Answer.question,exp.Answer.question.nullable.error.question,exp.Answer.question.nullable.error.exp.Question,exp.Answer.question.nullable.error,answer.question.nullable.error.exp.Answer.question,answer.question.nullable.error.question,answer.question.nullable.error.exp.Question,answer.question.nullable.error,exp.Answer.question.nullable.exp.Answer.question,exp.Answer.question.nullable.question,exp.Answer.question.nullable.exp.Question,exp.Answer.question.nullable,answer.question.nullable.exp.Answer.question,answer.question.nullable.question,answer.question.nullable.exp.Question,answer.question.nullable,nullable.exp.Answer.question,nullable.question,nullable.exp.Question,nullable]; arguments [question,class exp.Answer]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'exp.Answer' on field 'text': rejected value [null]; codes [exp.Answer.text.nullable.error.exp.Answer.text,exp.Answer.text.nullable.error.text,exp.Answer.text.nullable.error.java.lang.String,exp.Answer.text.nullable.error,answer.text.nullable.error.exp.Answer.text,answer.text.nullable.error.text,answer.text.nullable.error.java.lang.String,answer.text.nullable.error,exp.Answer.text.nullable.exp.Answer.text,exp.Answer.text.nullable.text,exp.Answer.text.nullable.java.lang.String,exp.Answer.text.nullable,answer.text.nullable.exp.Answer.text,answer.text.nullable.text,answer.text.nullable.java.lang.String,answer.text.nullable,nullable.exp.Answer.text,nullable.text,nullable.java.lang.String,nullable]; arguments [text,class exp.Answer]; default message [Property [{0}] of class [{1}] cannot be null]
+
+	at grails.plugin.fixtures.builder.processor.FixtureBeanPostProcessor.postProcessAfterInitialization(FixtureBeanPostProcessor.groovy:98)
+	at grails.spring.BeanBuilder.createApplicationContext(BeanBuilder.java:582)
+	at grails.plugin.fixtures.builder.FixtureBuilder.createApplicationContext(FixtureBuilder.groovy:139)
+	at grails.plugin.fixtures.Fixture.load(Fixture.groovy:39)
+	at grails.plugin.fixtures.FixtureLoader.doLoad(FixtureLoader.groovy:50)
+	at grails.plugin.fixtures.FixtureLoader.load(FixtureLoader.groovy:42)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions(UserOpinionIntegrationSpec.groovy:41)
+2011-05-22 18:32:33,541 [main] ERROR StackTrace  - Sanitizing stacktrace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'answer3': Initialization of bean failed; nested exception is grails.validation.ValidationException: Validation Error(s) occurred during save():
+- Field error in object 'exp.Answer' on field 'question': rejected value [null]; codes [exp.Answer.question.nullable.error.exp.Answer.question,exp.Answer.question.nullable.error.question,exp.Answer.question.nullable.error.exp.Question,exp.Answer.question.nullable.error,answer.question.nullable.error.exp.Answer.question,answer.question.nullable.error.question,answer.question.nullable.error.exp.Question,answer.question.nullable.error,exp.Answer.question.nullable.exp.Answer.question,exp.Answer.question.nullable.question,exp.Answer.question.nullable.exp.Question,exp.Answer.question.nullable,answer.question.nullable.exp.Answer.question,answer.question.nullable.question,answer.question.nullable.exp.Question,answer.question.nullable,nullable.exp.Answer.question,nullable.question,nullable.exp.Question,nullable]; arguments [question,class exp.Answer]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'exp.Answer' on field 'text': rejected value [null]; codes [exp.Answer.text.nullable.error.exp.Answer.text,exp.Answer.text.nullable.error.text,exp.Answer.text.nullable.error.java.lang.String,exp.Answer.text.nullable.error,answer.text.nullable.error.exp.Answer.text,answer.text.nullable.error.text,answer.text.nullable.error.java.lang.String,answer.text.nullable.error,exp.Answer.text.nullable.exp.Answer.text,exp.Answer.text.nullable.text,exp.Answer.text.nullable.java.lang.String,exp.Answer.text.nullable,answer.text.nullable.exp.Answer.text,answer.text.nullable.text,answer.text.nullable.java.lang.String,answer.text.nullable,nullable.exp.Answer.text,nullable.text,nullable.java.lang.String,nullable]; arguments [text,class exp.Answer]; default message [Property [{0}] of class [{1}] cannot be null]
+
+	at grails.spring.BeanBuilder.createApplicationContext(BeanBuilder.java:582)
+	at grails.plugin.fixtures.builder.FixtureBuilder.createApplicationContext(FixtureBuilder.groovy:139)
+	at grails.plugin.fixtures.Fixture.load(Fixture.groovy:39)
+	at grails.plugin.fixtures.FixtureLoader.doLoad(FixtureLoader.groovy:50)
+	at grails.plugin.fixtures.FixtureLoader.load(FixtureLoader.groovy:42)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions(UserOpinionIntegrationSpec.groovy:41)
+Caused by: grails.validation.ValidationException: Validation Error(s) occurred during save():
+- Field error in object 'exp.Answer' on field 'question': rejected value [null]; codes [exp.Answer.question.nullable.error.exp.Answer.question,exp.Answer.question.nullable.error.question,exp.Answer.question.nullable.error.exp.Question,exp.Answer.question.nullable.error,answer.question.nullable.error.exp.Answer.question,answer.question.nullable.error.question,answer.question.nullable.error.exp.Question,answer.question.nullable.error,exp.Answer.question.nullable.exp.Answer.question,exp.Answer.question.nullable.question,exp.Answer.question.nullable.exp.Question,exp.Answer.question.nullable,answer.question.nullable.exp.Answer.question,answer.question.nullable.question,answer.question.nullable.exp.Question,answer.question.nullable,nullable.exp.Answer.question,nullable.question,nullable.exp.Question,nullable]; arguments [question,class exp.Answer]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'exp.Answer' on field 'text': rejected value [null]; codes [exp.Answer.text.nullable.error.exp.Answer.text,exp.Answer.text.nullable.error.text,exp.Answer.text.nullable.error.java.lang.String,exp.Answer.text.nullable.error,answer.text.nullable.error.exp.Answer.text,answer.text.nullable.error.text,answer.text.nullable.error.java.lang.String,answer.text.nullable.error,exp.Answer.text.nullable.exp.Answer.text,exp.Answer.text.nullable.text,exp.Answer.text.nullable.java.lang.String,exp.Answer.text.nullable,answer.text.nullable.exp.Answer.text,answer.text.nullable.text,answer.text.nullable.java.lang.String,answer.text.nullable,nullable.exp.Answer.text,nullable.text,nullable.java.lang.String,nullable]; arguments [text,class exp.Answer]; default message [Property [{0}] of class [{1}] cannot be null]
+
+	at grails.plugin.fixtures.builder.processor.FixtureBeanPostProcessor.postProcessAfterInitialization(FixtureBeanPostProcessor.groovy:98)
+	... 6 more
+2011-05-22 18:35:04,048 [main] ERROR StackTrace  - Sanitizing stacktrace:
+grails.plugin.fixtures.exception.UnknownFixtureBeanException: there is no bean named 'question1' in this fixture
+	at grails.plugin.fixtures.Fixture.propertyMissing(Fixture.groovy:59)
+	at grails.plugin.fixtures.Fixture.getProperty(Fixture.groovy)
+	at exp.UserOpinionIntegrationSpec.spock_feature_1_0_closure1_closure4_closure7(UserOpinionIntegrationSpec.groovy:14)
+	at groovy.lang.Closure.call(Closure.java:282)
+	at grails.spring.BeanBuilder.invokeBeanDefiningMethod(BeanBuilder.java:679)
+	at grails.spring.BeanBuilder.invokeMethod(BeanBuilder.java:550)
+	at grails.plugin.fixtures.builder.FixtureBuilder.invokeMethod(FixtureBuilder.groovy:120)
+	at groovy.lang.GroovyObjectSupport.invokeMethod(GroovyObjectSupport.java:44)
+	at exp.UserOpinionIntegrationSpec.spock_feature_1_0_closure1_closure4(UserOpinionIntegrationSpec.groovy:13)
+	at groovy.lang.Closure.call(Closure.java:282)
+	at groovy.lang.Closure.call(Closure.java:295)
+	at exp.UserOpinionIntegrationSpec.test save new user opinion_closure1(UserOpinionIntegrationSpec.groovy:12)
+	at exp.UserOpinionIntegrationSpec.test save new user opinion_closure1(UserOpinionIntegrationSpec.groovy)
+	at groovy.lang.Closure.call(Closure.java:282)
+	at groovy.lang.Closure.call(Closure.java:277)
+	at grails.spring.BeanBuilder.invokeBeanDefiningClosure(BeanBuilder.java:723)
+	at grails.spring.BeanBuilder.beans(BeanBuilder.java:573)
+	at grails.plugin.fixtures.builder.FixtureBuilder.beans(FixtureBuilder.groovy:106)
+	at grails.plugin.fixtures.Fixture.load(Fixture.groovy:39)
+	at grails.plugin.fixtures.FixtureLoader.doLoad(FixtureLoader.groovy:50)
+	at grails.plugin.fixtures.FixtureLoader.load(FixtureLoader.groovy:42)
+	at exp.UserOpinionIntegrationSpec.test save new user opinion(UserOpinionIntegrationSpec.groovy:11)
+2011-05-22 18:35:04,162 [main] ERROR StackTrace  - Sanitizing stacktrace:
+grails.plugin.fixtures.exception.UnknownFixtureBeanException: there is no bean named 'question1' in this fixture
+	at grails.plugin.fixtures.Fixture.propertyMissing(Fixture.groovy:59)
+	at grails.plugin.fixtures.Fixture.getProperty(Fixture.groovy)
+	at exp.UserOpinionIntegrationSpec.spock_feature_1_0_closure1_closure4_closure7(UserOpinionIntegrationSpec.groovy:14)
+	at grails.spring.BeanBuilder.invokeBeanDefiningMethod(BeanBuilder.java:679)
+	at grails.spring.BeanBuilder.invokeMethod(BeanBuilder.java:550)
+	at grails.plugin.fixtures.builder.FixtureBuilder.invokeMethod(FixtureBuilder.groovy:120)
+	at exp.UserOpinionIntegrationSpec.spock_feature_1_0_closure1_closure4(UserOpinionIntegrationSpec.groovy:13)
+	at exp.UserOpinionIntegrationSpec.test save new user opinion_closure1(UserOpinionIntegrationSpec.groovy:12)
+	at exp.UserOpinionIntegrationSpec.test save new user opinion_closure1(UserOpinionIntegrationSpec.groovy)
+	at grails.spring.BeanBuilder.invokeBeanDefiningClosure(BeanBuilder.java:723)
+	at grails.spring.BeanBuilder.beans(BeanBuilder.java:573)
+	at grails.plugin.fixtures.builder.FixtureBuilder.beans(FixtureBuilder.groovy:106)
+	at grails.plugin.fixtures.Fixture.load(Fixture.groovy:39)
+	at grails.plugin.fixtures.FixtureLoader.doLoad(FixtureLoader.groovy:50)
+	at grails.plugin.fixtures.FixtureLoader.load(FixtureLoader.groovy:42)
+	at exp.UserOpinionIntegrationSpec.test save new user opinion(UserOpinionIntegrationSpec.groovy:11)
+2011-05-22 18:35:04,226 [main] ERROR StackTrace  - Sanitizing stacktrace:
+grails.plugin.fixtures.exception.UnknownFixtureBeanException: there is no bean named 'question1' in this fixture
+	at grails.plugin.fixtures.Fixture.propertyMissing(Fixture.groovy:59)
+	at exp.UserOpinionIntegrationSpec.spock_feature_1_1_closure2_closure8(UserOpinionIntegrationSpec.groovy:45)
+	at groovy.lang.Closure.call(Closure.java:282)
+	at grails.spring.BeanBuilder.invokeBeanDefiningMethod(BeanBuilder.java:679)
+	at grails.spring.BeanBuilder.invokeMethod(BeanBuilder.java:550)
+	at grails.plugin.fixtures.builder.FixtureBuilder.invokeMethod(FixtureBuilder.groovy:120)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions_closure2(UserOpinionIntegrationSpec.groovy:42)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions_closure2(UserOpinionIntegrationSpec.groovy)
+	at groovy.lang.Closure.call(Closure.java:282)
+	at groovy.lang.Closure.call(Closure.java:277)
+	at grails.spring.BeanBuilder.invokeBeanDefiningClosure(BeanBuilder.java:723)
+	at grails.spring.BeanBuilder.beans(BeanBuilder.java:573)
+	at grails.plugin.fixtures.builder.FixtureBuilder.beans(FixtureBuilder.groovy:106)
+	at grails.plugin.fixtures.Fixture.load(Fixture.groovy:39)
+	at grails.plugin.fixtures.FixtureLoader.doLoad(FixtureLoader.groovy:50)
+	at grails.plugin.fixtures.FixtureLoader.load(FixtureLoader.groovy:42)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions(UserOpinionIntegrationSpec.groovy:41)
+2011-05-22 18:35:04,226 [main] ERROR StackTrace  - Sanitizing stacktrace:
+grails.plugin.fixtures.exception.UnknownFixtureBeanException: there is no bean named 'question1' in this fixture
+	at grails.plugin.fixtures.Fixture.propertyMissing(Fixture.groovy:59)
+	at exp.UserOpinionIntegrationSpec.spock_feature_1_1_closure2_closure8(UserOpinionIntegrationSpec.groovy:45)
+	at grails.spring.BeanBuilder.invokeBeanDefiningMethod(BeanBuilder.java:679)
+	at grails.spring.BeanBuilder.invokeMethod(BeanBuilder.java:550)
+	at grails.plugin.fixtures.builder.FixtureBuilder.invokeMethod(FixtureBuilder.groovy:120)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions_closure2(UserOpinionIntegrationSpec.groovy:42)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions_closure2(UserOpinionIntegrationSpec.groovy)
+	at grails.spring.BeanBuilder.invokeBeanDefiningClosure(BeanBuilder.java:723)
+	at grails.spring.BeanBuilder.beans(BeanBuilder.java:573)
+	at grails.plugin.fixtures.builder.FixtureBuilder.beans(FixtureBuilder.groovy:106)
+	at grails.plugin.fixtures.Fixture.load(Fixture.groovy:39)
+	at grails.plugin.fixtures.FixtureLoader.doLoad(FixtureLoader.groovy:50)
+	at grails.plugin.fixtures.FixtureLoader.load(FixtureLoader.groovy:42)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions(UserOpinionIntegrationSpec.groovy:41)
+2011-05-22 18:37:24,145 [main] ERROR StackTrace  - Sanitizing stacktrace:
+org.springframework.orm.hibernate3.HibernateSystemException: a different object with the same identifier value was already associated with the session: [exp.Question#2]; nested exception is org.hibernate.NonUniqueObjectException: a different object with the same identifier value was already associated with the session: [exp.Question#2]
+	at org.springframework.orm.hibernate3.SessionFactoryUtils.convertHibernateAccessException(SessionFactoryUtils.java:679)
+	at org.springframework.orm.hibernate3.HibernateAccessor.convertHibernateAccessException(HibernateAccessor.java:412)
+	at org.springframework.orm.hibernate3.HibernateTemplate.doExecute(HibernateTemplate.java:411)
+	at org.springframework.orm.hibernate3.HibernateTemplate.execute(HibernateTemplate.java:339)
+	at org.codehaus.groovy.grails.orm.hibernate.metaclass.SavePersistentMethod.performSave(SavePersistentMethod.java:53)
+	at org.codehaus.groovy.grails.orm.hibernate.metaclass.AbstractSavePersistentMethod.doInvokeInternal(AbstractSavePersistentMethod.java:179)
+	at org.codehaus.groovy.grails.orm.hibernate.metaclass.AbstractDynamicPersistentMethod.invoke(AbstractDynamicPersistentMethod.java:59)
+	at org.codehaus.groovy.grails.plugins.orm.hibernate.HibernatePluginSupport.addBasicPersistenceMethods_closure71(HibernatePluginSupport.groovy:806)
+	at grails.plugin.fixtures.builder.processor.FixtureBeanPostProcessor.postProcessAfterInitialization_closure1_closure2(FixtureBeanPostProcessor.groovy:64)
+	at groovy.lang.Closure.call(Closure.java:282)
+	at groovy.lang.Closure.call(Closure.java:295)
+	at grails.plugin.fixtures.builder.processor.FixtureBeanPostProcessor.postProcessAfterInitialization_closure1(FixtureBeanPostProcessor.groovy:59)
+	at groovy.lang.Closure.call(Closure.java:282)
+	at groovy.lang.Closure.call(Closure.java:295)
+	at grails.plugin.fixtures.builder.processor.FixtureBeanPostProcessor.postProcessAfterInitialization(FixtureBeanPostProcessor.groovy:45)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:407)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1426)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:580)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425)
+	at org.codehaus.groovy.grails.commons.spring.DefaultRuntimeSpringConfiguration.getApplicationContext(DefaultRuntimeSpringConfiguration.java:154)
+	at grails.spring.BeanBuilder.createApplicationContext(BeanBuilder.java:582)
+	at grails.plugin.fixtures.builder.FixtureBuilder.createApplicationContext(FixtureBuilder.groovy:139)
+	at grails.plugin.fixtures.Fixture.load(Fixture.groovy:39)
+	at grails.plugin.fixtures.FixtureLoader.doLoad(FixtureLoader.groovy:50)
+	at grails.plugin.fixtures.FixtureLoader.load(FixtureLoader.groovy:42)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions(UserOpinionIntegrationSpec.groovy:41)
+Caused by: org.hibernate.NonUniqueObjectException: a different object with the same identifier value was already associated with the session: [exp.Question#2]
+	at org.hibernate.engine.StatefulPersistenceContext.checkUniqueness(StatefulPersistenceContext.java:613)
+	at org.hibernate.event.def.DefaultSaveOrUpdateEventListener.performUpdate(DefaultSaveOrUpdateEventListener.java:307)
+	at org.hibernate.event.def.DefaultSaveOrUpdateEventListener.entityIsDetached(DefaultSaveOrUpdateEventListener.java:246)
+	at org.hibernate.event.def.DefaultSaveOrUpdateEventListener.performSaveOrUpdate(DefaultSaveOrUpdateEventListener.java:112)
+	at org.hibernate.event.def.DefaultSaveOrUpdateEventListener.onSaveOrUpdate(DefaultSaveOrUpdateEventListener.java:93)
+	at org.codehaus.groovy.grails.orm.hibernate.support.ClosureEventTriggeringInterceptor.onSaveOrUpdate(ClosureEventTriggeringInterceptor.java:137)
+	at org.hibernate.impl.SessionImpl.fireSaveOrUpdate(SessionImpl.java:534)
+	at org.hibernate.impl.SessionImpl.saveOrUpdate(SessionImpl.java:526)
+	at org.hibernate.impl.SessionImpl.saveOrUpdate(SessionImpl.java:522)
+	at org.springframework.orm.hibernate3.HibernateTemplate.doExecute(HibernateTemplate.java:406)
+	... 29 more
+2011-05-22 18:37:24,149 [main] ERROR StackTrace  - Sanitizing stacktrace:
+org.hibernate.NonUniqueObjectException: a different object with the same identifier value was already associated with the session: [exp.Question#2]
+	at org.hibernate.engine.StatefulPersistenceContext.checkUniqueness(StatefulPersistenceContext.java:613)
+	at org.hibernate.event.def.DefaultSaveOrUpdateEventListener.performUpdate(DefaultSaveOrUpdateEventListener.java:307)
+	at org.hibernate.event.def.DefaultSaveOrUpdateEventListener.entityIsDetached(DefaultSaveOrUpdateEventListener.java:246)
+	at org.hibernate.event.def.DefaultSaveOrUpdateEventListener.performSaveOrUpdate(DefaultSaveOrUpdateEventListener.java:112)
+	at org.hibernate.event.def.DefaultSaveOrUpdateEventListener.onSaveOrUpdate(DefaultSaveOrUpdateEventListener.java:93)
+	at org.codehaus.groovy.grails.orm.hibernate.support.ClosureEventTriggeringInterceptor.onSaveOrUpdate(ClosureEventTriggeringInterceptor.java:137)
+	at org.hibernate.impl.SessionImpl.fireSaveOrUpdate(SessionImpl.java:534)
+	at org.hibernate.impl.SessionImpl.saveOrUpdate(SessionImpl.java:526)
+	at org.hibernate.impl.SessionImpl.saveOrUpdate(SessionImpl.java:522)
+	at org.springframework.orm.hibernate3.HibernateTemplate.doExecute(HibernateTemplate.java:406)
+	at org.springframework.orm.hibernate3.HibernateTemplate.execute(HibernateTemplate.java:339)
+	at org.codehaus.groovy.grails.orm.hibernate.metaclass.SavePersistentMethod.performSave(SavePersistentMethod.java:53)
+	at org.codehaus.groovy.grails.orm.hibernate.metaclass.AbstractSavePersistentMethod.doInvokeInternal(AbstractSavePersistentMethod.java:179)
+	at org.codehaus.groovy.grails.orm.hibernate.metaclass.AbstractDynamicPersistentMethod.invoke(AbstractDynamicPersistentMethod.java:59)
+	at org.codehaus.groovy.grails.plugins.orm.hibernate.HibernatePluginSupport.addBasicPersistenceMethods_closure71(HibernatePluginSupport.groovy:806)
+	at grails.plugin.fixtures.builder.processor.FixtureBeanPostProcessor.postProcessAfterInitialization_closure1_closure2(FixtureBeanPostProcessor.groovy:64)
+	at groovy.lang.Closure.call(Closure.java:282)
+	at groovy.lang.Closure.call(Closure.java:295)
+	at grails.plugin.fixtures.builder.processor.FixtureBeanPostProcessor.postProcessAfterInitialization_closure1(FixtureBeanPostProcessor.groovy:59)
+	at groovy.lang.Closure.call(Closure.java:282)
+	at groovy.lang.Closure.call(Closure.java:295)
+	at grails.plugin.fixtures.builder.processor.FixtureBeanPostProcessor.postProcessAfterInitialization(FixtureBeanPostProcessor.groovy:45)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:407)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1426)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:580)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425)
+	at org.codehaus.groovy.grails.commons.spring.DefaultRuntimeSpringConfiguration.getApplicationContext(DefaultRuntimeSpringConfiguration.java:154)
+	at grails.spring.BeanBuilder.createApplicationContext(BeanBuilder.java:582)
+	at grails.plugin.fixtures.builder.FixtureBuilder.createApplicationContext(FixtureBuilder.groovy:139)
+	at grails.plugin.fixtures.Fixture.load(Fixture.groovy:39)
+	at grails.plugin.fixtures.FixtureLoader.doLoad(FixtureLoader.groovy:50)
+	at grails.plugin.fixtures.FixtureLoader.load(FixtureLoader.groovy:42)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions(UserOpinionIntegrationSpec.groovy:41)
+2011-05-22 18:37:24,151 [main] ERROR StackTrace  - Sanitizing stacktrace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'simpleSurvey': Initialization of bean failed; nested exception is org.springframework.orm.hibernate3.HibernateSystemException: a different object with the same identifier value was already associated with the session: [exp.Question#2]; nested exception is org.hibernate.NonUniqueObjectException: a different object with the same identifier value was already associated with the session: [exp.Question#2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:527)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:580)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425)
+	at org.codehaus.groovy.grails.commons.spring.DefaultRuntimeSpringConfiguration.getApplicationContext(DefaultRuntimeSpringConfiguration.java:154)
+	at grails.spring.BeanBuilder.createApplicationContext(BeanBuilder.java:582)
+	at grails.plugin.fixtures.builder.FixtureBuilder.createApplicationContext(FixtureBuilder.groovy:139)
+	at grails.plugin.fixtures.Fixture.load(Fixture.groovy:39)
+	at grails.plugin.fixtures.FixtureLoader.doLoad(FixtureLoader.groovy:50)
+	at grails.plugin.fixtures.FixtureLoader.load(FixtureLoader.groovy:42)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions(UserOpinionIntegrationSpec.groovy:41)
+Caused by: org.springframework.orm.hibernate3.HibernateSystemException: a different object with the same identifier value was already associated with the session: [exp.Question#2]; nested exception is org.hibernate.NonUniqueObjectException: a different object with the same identifier value was already associated with the session: [exp.Question#2]
+	at grails.plugin.fixtures.builder.processor.FixtureBeanPostProcessor.postProcessAfterInitialization_closure1_closure2(FixtureBeanPostProcessor.groovy:64)
+	at grails.plugin.fixtures.builder.processor.FixtureBeanPostProcessor.postProcessAfterInitialization_closure1(FixtureBeanPostProcessor.groovy:59)
+	at grails.plugin.fixtures.builder.processor.FixtureBeanPostProcessor.postProcessAfterInitialization(FixtureBeanPostProcessor.groovy:45)
+	... 6 more
+Caused by: org.hibernate.NonUniqueObjectException: a different object with the same identifier value was already associated with the session: [exp.Question#2]
+	... 9 more
+2011-05-22 18:37:24,171 [main] ERROR StackTrace  - Sanitizing stacktrace:
+org.springframework.orm.hibernate3.HibernateSystemException: a different object with the same identifier value was already associated with the session: [exp.Question#2]; nested exception is org.hibernate.NonUniqueObjectException: a different object with the same identifier value was already associated with the session: [exp.Question#2]
+	at grails.plugin.fixtures.builder.processor.FixtureBeanPostProcessor.postProcessAfterInitialization_closure1_closure2(FixtureBeanPostProcessor.groovy:64)
+	at grails.plugin.fixtures.builder.processor.FixtureBeanPostProcessor.postProcessAfterInitialization_closure1(FixtureBeanPostProcessor.groovy:59)
+	at grails.plugin.fixtures.builder.processor.FixtureBeanPostProcessor.postProcessAfterInitialization(FixtureBeanPostProcessor.groovy:45)
+	at grails.spring.BeanBuilder.createApplicationContext(BeanBuilder.java:582)
+	at grails.plugin.fixtures.builder.FixtureBuilder.createApplicationContext(FixtureBuilder.groovy:139)
+	at grails.plugin.fixtures.Fixture.load(Fixture.groovy:39)
+	at grails.plugin.fixtures.FixtureLoader.doLoad(FixtureLoader.groovy:50)
+	at grails.plugin.fixtures.FixtureLoader.load(FixtureLoader.groovy:42)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions(UserOpinionIntegrationSpec.groovy:41)
+Caused by: org.hibernate.NonUniqueObjectException: a different object with the same identifier value was already associated with the session: [exp.Question#2]
+	... 9 more
+2011-05-22 18:37:24,171 [main] ERROR StackTrace  - Sanitizing stacktrace:
+org.hibernate.NonUniqueObjectException: a different object with the same identifier value was already associated with the session: [exp.Question#2]
+	at grails.plugin.fixtures.builder.processor.FixtureBeanPostProcessor.postProcessAfterInitialization_closure1_closure2(FixtureBeanPostProcessor.groovy:64)
+	at grails.plugin.fixtures.builder.processor.FixtureBeanPostProcessor.postProcessAfterInitialization_closure1(FixtureBeanPostProcessor.groovy:59)
+	at grails.plugin.fixtures.builder.processor.FixtureBeanPostProcessor.postProcessAfterInitialization(FixtureBeanPostProcessor.groovy:45)
+	at grails.spring.BeanBuilder.createApplicationContext(BeanBuilder.java:582)
+	at grails.plugin.fixtures.builder.FixtureBuilder.createApplicationContext(FixtureBuilder.groovy:139)
+	at grails.plugin.fixtures.Fixture.load(Fixture.groovy:39)
+	at grails.plugin.fixtures.FixtureLoader.doLoad(FixtureLoader.groovy:50)
+	at grails.plugin.fixtures.FixtureLoader.load(FixtureLoader.groovy:42)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions(UserOpinionIntegrationSpec.groovy:41)
+2011-05-22 18:37:24,171 [main] ERROR StackTrace  - Sanitizing stacktrace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'simpleSurvey': Initialization of bean failed; nested exception is org.springframework.orm.hibernate3.HibernateSystemException: a different object with the same identifier value was already associated with the session: [exp.Question#2]; nested exception is org.hibernate.NonUniqueObjectException: a different object with the same identifier value was already associated with the session: [exp.Question#2]
+	at grails.spring.BeanBuilder.createApplicationContext(BeanBuilder.java:582)
+	at grails.plugin.fixtures.builder.FixtureBuilder.createApplicationContext(FixtureBuilder.groovy:139)
+	at grails.plugin.fixtures.Fixture.load(Fixture.groovy:39)
+	at grails.plugin.fixtures.FixtureLoader.doLoad(FixtureLoader.groovy:50)
+	at grails.plugin.fixtures.FixtureLoader.load(FixtureLoader.groovy:42)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions(UserOpinionIntegrationSpec.groovy:41)
+Caused by: org.springframework.orm.hibernate3.HibernateSystemException: a different object with the same identifier value was already associated with the session: [exp.Question#2]; nested exception is org.hibernate.NonUniqueObjectException: a different object with the same identifier value was already associated with the session: [exp.Question#2]
+	at grails.plugin.fixtures.builder.processor.FixtureBeanPostProcessor.postProcessAfterInitialization_closure1_closure2(FixtureBeanPostProcessor.groovy:64)
+	at grails.plugin.fixtures.builder.processor.FixtureBeanPostProcessor.postProcessAfterInitialization_closure1(FixtureBeanPostProcessor.groovy:59)
+	at grails.plugin.fixtures.builder.processor.FixtureBeanPostProcessor.postProcessAfterInitialization(FixtureBeanPostProcessor.groovy:45)
+	... 6 more
+Caused by: org.hibernate.NonUniqueObjectException: a different object with the same identifier value was already associated with the session: [exp.Question#2]
+	... 9 more
+2011-05-22 18:52:40,428 [main] ERROR StackTrace  - Sanitizing stacktrace:
+grails.plugin.fixtures.exception.UnknownFixtureBeanException: there is no bean named 'question1' in this fixture
+	at grails.plugin.fixtures.Fixture.propertyMissing(Fixture.groovy:59)
+	at grails.plugin.fixtures.Fixture.getProperty(Fixture.groovy)
+	at exp.UserOpinionIntegrationSpec.spock_feature_1_0_closure1_closure4_closure7(UserOpinionIntegrationSpec.groovy:14)
+	at groovy.lang.Closure.call(Closure.java:282)
+	at grails.spring.BeanBuilder.invokeBeanDefiningMethod(BeanBuilder.java:679)
+	at grails.spring.BeanBuilder.invokeMethod(BeanBuilder.java:550)
+	at grails.plugin.fixtures.builder.FixtureBuilder.invokeMethod(FixtureBuilder.groovy:120)
+	at groovy.lang.GroovyObjectSupport.invokeMethod(GroovyObjectSupport.java:44)
+	at exp.UserOpinionIntegrationSpec.spock_feature_1_0_closure1_closure4(UserOpinionIntegrationSpec.groovy:13)
+	at groovy.lang.Closure.call(Closure.java:282)
+	at groovy.lang.Closure.call(Closure.java:295)
+	at exp.UserOpinionIntegrationSpec.test save new user opinion_closure1(UserOpinionIntegrationSpec.groovy:12)
+	at exp.UserOpinionIntegrationSpec.test save new user opinion_closure1(UserOpinionIntegrationSpec.groovy)
+	at groovy.lang.Closure.call(Closure.java:282)
+	at groovy.lang.Closure.call(Closure.java:277)
+	at grails.spring.BeanBuilder.invokeBeanDefiningClosure(BeanBuilder.java:723)
+	at grails.spring.BeanBuilder.beans(BeanBuilder.java:573)
+	at grails.plugin.fixtures.builder.FixtureBuilder.beans(FixtureBuilder.groovy:106)
+	at grails.plugin.fixtures.Fixture.load(Fixture.groovy:39)
+	at grails.plugin.fixtures.FixtureLoader.doLoad(FixtureLoader.groovy:50)
+	at grails.plugin.fixtures.FixtureLoader.load(FixtureLoader.groovy:42)
+	at exp.UserOpinionIntegrationSpec.test save new user opinion(UserOpinionIntegrationSpec.groovy:11)
+2011-05-22 18:52:40,457 [main] ERROR StackTrace  - Sanitizing stacktrace:
+grails.plugin.fixtures.exception.UnknownFixtureBeanException: there is no bean named 'question1' in this fixture
+	at grails.plugin.fixtures.Fixture.propertyMissing(Fixture.groovy:59)
+	at grails.plugin.fixtures.Fixture.getProperty(Fixture.groovy)
+	at exp.UserOpinionIntegrationSpec.spock_feature_1_0_closure1_closure4_closure7(UserOpinionIntegrationSpec.groovy:14)
+	at grails.spring.BeanBuilder.invokeBeanDefiningMethod(BeanBuilder.java:679)
+	at grails.spring.BeanBuilder.invokeMethod(BeanBuilder.java:550)
+	at grails.plugin.fixtures.builder.FixtureBuilder.invokeMethod(FixtureBuilder.groovy:120)
+	at exp.UserOpinionIntegrationSpec.spock_feature_1_0_closure1_closure4(UserOpinionIntegrationSpec.groovy:13)
+	at exp.UserOpinionIntegrationSpec.test save new user opinion_closure1(UserOpinionIntegrationSpec.groovy:12)
+	at exp.UserOpinionIntegrationSpec.test save new user opinion_closure1(UserOpinionIntegrationSpec.groovy)
+	at grails.spring.BeanBuilder.invokeBeanDefiningClosure(BeanBuilder.java:723)
+	at grails.spring.BeanBuilder.beans(BeanBuilder.java:573)
+	at grails.plugin.fixtures.builder.FixtureBuilder.beans(FixtureBuilder.groovy:106)
+	at grails.plugin.fixtures.Fixture.load(Fixture.groovy:39)
+	at grails.plugin.fixtures.FixtureLoader.doLoad(FixtureLoader.groovy:50)
+	at grails.plugin.fixtures.FixtureLoader.load(FixtureLoader.groovy:42)
+	at exp.UserOpinionIntegrationSpec.test save new user opinion(UserOpinionIntegrationSpec.groovy:11)
+2011-05-22 18:52:40,510 [main] ERROR StackTrace  - Sanitizing stacktrace:
+grails.plugin.fixtures.exception.UnknownFixtureBeanException: there is no bean named 'question1' in this fixture
+	at grails.plugin.fixtures.Fixture.propertyMissing(Fixture.groovy:59)
+	at exp.UserOpinionIntegrationSpec.spock_feature_1_1_closure2_closure8(UserOpinionIntegrationSpec.groovy:45)
+	at groovy.lang.Closure.call(Closure.java:282)
+	at grails.spring.BeanBuilder.invokeBeanDefiningMethod(BeanBuilder.java:679)
+	at grails.spring.BeanBuilder.invokeMethod(BeanBuilder.java:550)
+	at grails.plugin.fixtures.builder.FixtureBuilder.invokeMethod(FixtureBuilder.groovy:120)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions_closure2(UserOpinionIntegrationSpec.groovy:42)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions_closure2(UserOpinionIntegrationSpec.groovy)
+	at groovy.lang.Closure.call(Closure.java:282)
+	at groovy.lang.Closure.call(Closure.java:277)
+	at grails.spring.BeanBuilder.invokeBeanDefiningClosure(BeanBuilder.java:723)
+	at grails.spring.BeanBuilder.beans(BeanBuilder.java:573)
+	at grails.plugin.fixtures.builder.FixtureBuilder.beans(FixtureBuilder.groovy:106)
+	at grails.plugin.fixtures.Fixture.load(Fixture.groovy:39)
+	at grails.plugin.fixtures.FixtureLoader.doLoad(FixtureLoader.groovy:50)
+	at grails.plugin.fixtures.FixtureLoader.load(FixtureLoader.groovy:42)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions(UserOpinionIntegrationSpec.groovy:41)
+2011-05-22 18:52:40,510 [main] ERROR StackTrace  - Sanitizing stacktrace:
+grails.plugin.fixtures.exception.UnknownFixtureBeanException: there is no bean named 'question1' in this fixture
+	at grails.plugin.fixtures.Fixture.propertyMissing(Fixture.groovy:59)
+	at exp.UserOpinionIntegrationSpec.spock_feature_1_1_closure2_closure8(UserOpinionIntegrationSpec.groovy:45)
+	at grails.spring.BeanBuilder.invokeBeanDefiningMethod(BeanBuilder.java:679)
+	at grails.spring.BeanBuilder.invokeMethod(BeanBuilder.java:550)
+	at grails.plugin.fixtures.builder.FixtureBuilder.invokeMethod(FixtureBuilder.groovy:120)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions_closure2(UserOpinionIntegrationSpec.groovy:42)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions_closure2(UserOpinionIntegrationSpec.groovy)
+	at grails.spring.BeanBuilder.invokeBeanDefiningClosure(BeanBuilder.java:723)
+	at grails.spring.BeanBuilder.beans(BeanBuilder.java:573)
+	at grails.plugin.fixtures.builder.FixtureBuilder.beans(FixtureBuilder.groovy:106)
+	at grails.plugin.fixtures.Fixture.load(Fixture.groovy:39)
+	at grails.plugin.fixtures.FixtureLoader.doLoad(FixtureLoader.groovy:50)
+	at grails.plugin.fixtures.FixtureLoader.load(FixtureLoader.groovy:42)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions(UserOpinionIntegrationSpec.groovy:41)
+2011-05-22 18:55:20,746 [main] ERROR StackTrace  - Sanitizing stacktrace:
+org.springframework.orm.hibernate3.HibernateSystemException: a different object with the same identifier value was already associated with the session: [exp.Question#2]; nested exception is org.hibernate.NonUniqueObjectException: a different object with the same identifier value was already associated with the session: [exp.Question#2]
+	at org.springframework.orm.hibernate3.SessionFactoryUtils.convertHibernateAccessException(SessionFactoryUtils.java:679)
+	at org.springframework.orm.hibernate3.HibernateAccessor.convertHibernateAccessException(HibernateAccessor.java:412)
+	at org.springframework.orm.hibernate3.HibernateTemplate.doExecute(HibernateTemplate.java:411)
+	at org.springframework.orm.hibernate3.HibernateTemplate.execute(HibernateTemplate.java:339)
+	at org.codehaus.groovy.grails.orm.hibernate.metaclass.SavePersistentMethod.performSave(SavePersistentMethod.java:53)
+	at org.codehaus.groovy.grails.orm.hibernate.metaclass.AbstractSavePersistentMethod.doInvokeInternal(AbstractSavePersistentMethod.java:179)
+	at org.codehaus.groovy.grails.orm.hibernate.metaclass.AbstractDynamicPersistentMethod.invoke(AbstractDynamicPersistentMethod.java:59)
+	at org.codehaus.groovy.grails.plugins.orm.hibernate.HibernatePluginSupport.addBasicPersistenceMethods_closure71(HibernatePluginSupport.groovy:806)
+	at grails.plugin.fixtures.builder.processor.FixtureBeanPostProcessor.postProcessAfterInitialization_closure1_closure2(FixtureBeanPostProcessor.groovy:64)
+	at groovy.lang.Closure.call(Closure.java:282)
+	at groovy.lang.Closure.call(Closure.java:295)
+	at grails.plugin.fixtures.builder.processor.FixtureBeanPostProcessor.postProcessAfterInitialization_closure1(FixtureBeanPostProcessor.groovy:59)
+	at groovy.lang.Closure.call(Closure.java:282)
+	at groovy.lang.Closure.call(Closure.java:295)
+	at grails.plugin.fixtures.builder.processor.FixtureBeanPostProcessor.postProcessAfterInitialization(FixtureBeanPostProcessor.groovy:45)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:407)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1426)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:580)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425)
+	at org.codehaus.groovy.grails.commons.spring.DefaultRuntimeSpringConfiguration.getApplicationContext(DefaultRuntimeSpringConfiguration.java:154)
+	at grails.spring.BeanBuilder.createApplicationContext(BeanBuilder.java:582)
+	at grails.plugin.fixtures.builder.FixtureBuilder.createApplicationContext(FixtureBuilder.groovy:139)
+	at grails.plugin.fixtures.Fixture.load(Fixture.groovy:39)
+	at grails.plugin.fixtures.FixtureLoader.doLoad(FixtureLoader.groovy:50)
+	at grails.plugin.fixtures.FixtureLoader.load(FixtureLoader.groovy:42)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions(UserOpinionIntegrationSpec.groovy:41)
+Caused by: org.hibernate.NonUniqueObjectException: a different object with the same identifier value was already associated with the session: [exp.Question#2]
+	at org.hibernate.engine.StatefulPersistenceContext.checkUniqueness(StatefulPersistenceContext.java:613)
+	at org.hibernate.event.def.DefaultSaveOrUpdateEventListener.performUpdate(DefaultSaveOrUpdateEventListener.java:307)
+	at org.hibernate.event.def.DefaultSaveOrUpdateEventListener.entityIsDetached(DefaultSaveOrUpdateEventListener.java:246)
+	at org.hibernate.event.def.DefaultSaveOrUpdateEventListener.performSaveOrUpdate(DefaultSaveOrUpdateEventListener.java:112)
+	at org.hibernate.event.def.DefaultSaveOrUpdateEventListener.onSaveOrUpdate(DefaultSaveOrUpdateEventListener.java:93)
+	at org.codehaus.groovy.grails.orm.hibernate.support.ClosureEventTriggeringInterceptor.onSaveOrUpdate(ClosureEventTriggeringInterceptor.java:137)
+	at org.hibernate.impl.SessionImpl.fireSaveOrUpdate(SessionImpl.java:534)
+	at org.hibernate.impl.SessionImpl.saveOrUpdate(SessionImpl.java:526)
+	at org.hibernate.impl.SessionImpl.saveOrUpdate(SessionImpl.java:522)
+	at org.springframework.orm.hibernate3.HibernateTemplate.doExecute(HibernateTemplate.java:406)
+	... 29 more
+2011-05-22 18:55:20,754 [main] ERROR StackTrace  - Sanitizing stacktrace:
+org.hibernate.NonUniqueObjectException: a different object with the same identifier value was already associated with the session: [exp.Question#2]
+	at org.hibernate.engine.StatefulPersistenceContext.checkUniqueness(StatefulPersistenceContext.java:613)
+	at org.hibernate.event.def.DefaultSaveOrUpdateEventListener.performUpdate(DefaultSaveOrUpdateEventListener.java:307)
+	at org.hibernate.event.def.DefaultSaveOrUpdateEventListener.entityIsDetached(DefaultSaveOrUpdateEventListener.java:246)
+	at org.hibernate.event.def.DefaultSaveOrUpdateEventListener.performSaveOrUpdate(DefaultSaveOrUpdateEventListener.java:112)
+	at org.hibernate.event.def.DefaultSaveOrUpdateEventListener.onSaveOrUpdate(DefaultSaveOrUpdateEventListener.java:93)
+	at org.codehaus.groovy.grails.orm.hibernate.support.ClosureEventTriggeringInterceptor.onSaveOrUpdate(ClosureEventTriggeringInterceptor.java:137)
+	at org.hibernate.impl.SessionImpl.fireSaveOrUpdate(SessionImpl.java:534)
+	at org.hibernate.impl.SessionImpl.saveOrUpdate(SessionImpl.java:526)
+	at org.hibernate.impl.SessionImpl.saveOrUpdate(SessionImpl.java:522)
+	at org.springframework.orm.hibernate3.HibernateTemplate.doExecute(HibernateTemplate.java:406)
+	at org.springframework.orm.hibernate3.HibernateTemplate.execute(HibernateTemplate.java:339)
+	at org.codehaus.groovy.grails.orm.hibernate.metaclass.SavePersistentMethod.performSave(SavePersistentMethod.java:53)
+	at org.codehaus.groovy.grails.orm.hibernate.metaclass.AbstractSavePersistentMethod.doInvokeInternal(AbstractSavePersistentMethod.java:179)
+	at org.codehaus.groovy.grails.orm.hibernate.metaclass.AbstractDynamicPersistentMethod.invoke(AbstractDynamicPersistentMethod.java:59)
+	at org.codehaus.groovy.grails.plugins.orm.hibernate.HibernatePluginSupport.addBasicPersistenceMethods_closure71(HibernatePluginSupport.groovy:806)
+	at grails.plugin.fixtures.builder.processor.FixtureBeanPostProcessor.postProcessAfterInitialization_closure1_closure2(FixtureBeanPostProcessor.groovy:64)
+	at groovy.lang.Closure.call(Closure.java:282)
+	at groovy.lang.Closure.call(Closure.java:295)
+	at grails.plugin.fixtures.builder.processor.FixtureBeanPostProcessor.postProcessAfterInitialization_closure1(FixtureBeanPostProcessor.groovy:59)
+	at groovy.lang.Closure.call(Closure.java:282)
+	at groovy.lang.Closure.call(Closure.java:295)
+	at grails.plugin.fixtures.builder.processor.FixtureBeanPostProcessor.postProcessAfterInitialization(FixtureBeanPostProcessor.groovy:45)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:407)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1426)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:580)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425)
+	at org.codehaus.groovy.grails.commons.spring.DefaultRuntimeSpringConfiguration.getApplicationContext(DefaultRuntimeSpringConfiguration.java:154)
+	at grails.spring.BeanBuilder.createApplicationContext(BeanBuilder.java:582)
+	at grails.plugin.fixtures.builder.FixtureBuilder.createApplicationContext(FixtureBuilder.groovy:139)
+	at grails.plugin.fixtures.Fixture.load(Fixture.groovy:39)
+	at grails.plugin.fixtures.FixtureLoader.doLoad(FixtureLoader.groovy:50)
+	at grails.plugin.fixtures.FixtureLoader.load(FixtureLoader.groovy:42)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions(UserOpinionIntegrationSpec.groovy:41)
+2011-05-22 18:55:20,762 [main] ERROR StackTrace  - Sanitizing stacktrace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'simpleSurvey': Initialization of bean failed; nested exception is org.springframework.orm.hibernate3.HibernateSystemException: a different object with the same identifier value was already associated with the session: [exp.Question#2]; nested exception is org.hibernate.NonUniqueObjectException: a different object with the same identifier value was already associated with the session: [exp.Question#2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:527)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:580)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425)
+	at org.codehaus.groovy.grails.commons.spring.DefaultRuntimeSpringConfiguration.getApplicationContext(DefaultRuntimeSpringConfiguration.java:154)
+	at grails.spring.BeanBuilder.createApplicationContext(BeanBuilder.java:582)
+	at grails.plugin.fixtures.builder.FixtureBuilder.createApplicationContext(FixtureBuilder.groovy:139)
+	at grails.plugin.fixtures.Fixture.load(Fixture.groovy:39)
+	at grails.plugin.fixtures.FixtureLoader.doLoad(FixtureLoader.groovy:50)
+	at grails.plugin.fixtures.FixtureLoader.load(FixtureLoader.groovy:42)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions(UserOpinionIntegrationSpec.groovy:41)
+Caused by: org.springframework.orm.hibernate3.HibernateSystemException: a different object with the same identifier value was already associated with the session: [exp.Question#2]; nested exception is org.hibernate.NonUniqueObjectException: a different object with the same identifier value was already associated with the session: [exp.Question#2]
+	at grails.plugin.fixtures.builder.processor.FixtureBeanPostProcessor.postProcessAfterInitialization_closure1_closure2(FixtureBeanPostProcessor.groovy:64)
+	at grails.plugin.fixtures.builder.processor.FixtureBeanPostProcessor.postProcessAfterInitialization_closure1(FixtureBeanPostProcessor.groovy:59)
+	at grails.plugin.fixtures.builder.processor.FixtureBeanPostProcessor.postProcessAfterInitialization(FixtureBeanPostProcessor.groovy:45)
+	... 6 more
+Caused by: org.hibernate.NonUniqueObjectException: a different object with the same identifier value was already associated with the session: [exp.Question#2]
+	... 9 more
+2011-05-22 18:55:20,771 [main] ERROR StackTrace  - Sanitizing stacktrace:
+org.springframework.orm.hibernate3.HibernateSystemException: a different object with the same identifier value was already associated with the session: [exp.Question#2]; nested exception is org.hibernate.NonUniqueObjectException: a different object with the same identifier value was already associated with the session: [exp.Question#2]
+	at grails.plugin.fixtures.builder.processor.FixtureBeanPostProcessor.postProcessAfterInitialization_closure1_closure2(FixtureBeanPostProcessor.groovy:64)
+	at grails.plugin.fixtures.builder.processor.FixtureBeanPostProcessor.postProcessAfterInitialization_closure1(FixtureBeanPostProcessor.groovy:59)
+	at grails.plugin.fixtures.builder.processor.FixtureBeanPostProcessor.postProcessAfterInitialization(FixtureBeanPostProcessor.groovy:45)
+	at grails.spring.BeanBuilder.createApplicationContext(BeanBuilder.java:582)
+	at grails.plugin.fixtures.builder.FixtureBuilder.createApplicationContext(FixtureBuilder.groovy:139)
+	at grails.plugin.fixtures.Fixture.load(Fixture.groovy:39)
+	at grails.plugin.fixtures.FixtureLoader.doLoad(FixtureLoader.groovy:50)
+	at grails.plugin.fixtures.FixtureLoader.load(FixtureLoader.groovy:42)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions(UserOpinionIntegrationSpec.groovy:41)
+Caused by: org.hibernate.NonUniqueObjectException: a different object with the same identifier value was already associated with the session: [exp.Question#2]
+	... 9 more
+2011-05-22 18:55:20,777 [main] ERROR StackTrace  - Sanitizing stacktrace:
+org.hibernate.NonUniqueObjectException: a different object with the same identifier value was already associated with the session: [exp.Question#2]
+	at grails.plugin.fixtures.builder.processor.FixtureBeanPostProcessor.postProcessAfterInitialization_closure1_closure2(FixtureBeanPostProcessor.groovy:64)
+	at grails.plugin.fixtures.builder.processor.FixtureBeanPostProcessor.postProcessAfterInitialization_closure1(FixtureBeanPostProcessor.groovy:59)
+	at grails.plugin.fixtures.builder.processor.FixtureBeanPostProcessor.postProcessAfterInitialization(FixtureBeanPostProcessor.groovy:45)
+	at grails.spring.BeanBuilder.createApplicationContext(BeanBuilder.java:582)
+	at grails.plugin.fixtures.builder.FixtureBuilder.createApplicationContext(FixtureBuilder.groovy:139)
+	at grails.plugin.fixtures.Fixture.load(Fixture.groovy:39)
+	at grails.plugin.fixtures.FixtureLoader.doLoad(FixtureLoader.groovy:50)
+	at grails.plugin.fixtures.FixtureLoader.load(FixtureLoader.groovy:42)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions(UserOpinionIntegrationSpec.groovy:41)
+2011-05-22 18:55:20,777 [main] ERROR StackTrace  - Sanitizing stacktrace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'simpleSurvey': Initialization of bean failed; nested exception is org.springframework.orm.hibernate3.HibernateSystemException: a different object with the same identifier value was already associated with the session: [exp.Question#2]; nested exception is org.hibernate.NonUniqueObjectException: a different object with the same identifier value was already associated with the session: [exp.Question#2]
+	at grails.spring.BeanBuilder.createApplicationContext(BeanBuilder.java:582)
+	at grails.plugin.fixtures.builder.FixtureBuilder.createApplicationContext(FixtureBuilder.groovy:139)
+	at grails.plugin.fixtures.Fixture.load(Fixture.groovy:39)
+	at grails.plugin.fixtures.FixtureLoader.doLoad(FixtureLoader.groovy:50)
+	at grails.plugin.fixtures.FixtureLoader.load(FixtureLoader.groovy:42)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions(UserOpinionIntegrationSpec.groovy:41)
+Caused by: org.springframework.orm.hibernate3.HibernateSystemException: a different object with the same identifier value was already associated with the session: [exp.Question#2]; nested exception is org.hibernate.NonUniqueObjectException: a different object with the same identifier value was already associated with the session: [exp.Question#2]
+	at grails.plugin.fixtures.builder.processor.FixtureBeanPostProcessor.postProcessAfterInitialization_closure1_closure2(FixtureBeanPostProcessor.groovy:64)
+	at grails.plugin.fixtures.builder.processor.FixtureBeanPostProcessor.postProcessAfterInitialization_closure1(FixtureBeanPostProcessor.groovy:59)
+	at grails.plugin.fixtures.builder.processor.FixtureBeanPostProcessor.postProcessAfterInitialization(FixtureBeanPostProcessor.groovy:45)
+	... 6 more
+Caused by: org.hibernate.NonUniqueObjectException: a different object with the same identifier value was already associated with the session: [exp.Question#2]
+	... 9 more
+2011-05-22 19:46:05,606 [main] ERROR StackTrace  - Sanitizing stacktrace:
+grails.plugin.fixtures.exception.UnknownFixtureBeanException: there is no bean named 'question1' in this fixture
+	at grails.plugin.fixtures.Fixture.propertyMissing(Fixture.groovy:59)
+	at grails.plugin.fixtures.Fixture.getProperty(Fixture.groovy)
+	at exp.UserOpinionIntegrationSpec.spock_feature_1_0_closure1_closure4_closure7(UserOpinionIntegrationSpec.groovy:14)
+	at groovy.lang.Closure.call(Closure.java:282)
+	at grails.spring.BeanBuilder.invokeBeanDefiningMethod(BeanBuilder.java:679)
+	at grails.spring.BeanBuilder.invokeMethod(BeanBuilder.java:550)
+	at grails.plugin.fixtures.builder.FixtureBuilder.invokeMethod(FixtureBuilder.groovy:120)
+	at groovy.lang.GroovyObjectSupport.invokeMethod(GroovyObjectSupport.java:44)
+	at exp.UserOpinionIntegrationSpec.spock_feature_1_0_closure1_closure4(UserOpinionIntegrationSpec.groovy:13)
+	at groovy.lang.Closure.call(Closure.java:282)
+	at groovy.lang.Closure.call(Closure.java:295)
+	at exp.UserOpinionIntegrationSpec.test save new user opinion_closure1(UserOpinionIntegrationSpec.groovy:12)
+	at exp.UserOpinionIntegrationSpec.test save new user opinion_closure1(UserOpinionIntegrationSpec.groovy)
+	at groovy.lang.Closure.call(Closure.java:282)
+	at groovy.lang.Closure.call(Closure.java:277)
+	at grails.spring.BeanBuilder.invokeBeanDefiningClosure(BeanBuilder.java:723)
+	at grails.spring.BeanBuilder.beans(BeanBuilder.java:573)
+	at grails.plugin.fixtures.builder.FixtureBuilder.beans(FixtureBuilder.groovy:106)
+	at grails.plugin.fixtures.Fixture.load(Fixture.groovy:39)
+	at grails.plugin.fixtures.FixtureLoader.doLoad(FixtureLoader.groovy:50)
+	at grails.plugin.fixtures.FixtureLoader.load(FixtureLoader.groovy:42)
+	at exp.UserOpinionIntegrationSpec.test save new user opinion(UserOpinionIntegrationSpec.groovy:11)
+2011-05-22 19:46:05,624 [main] ERROR StackTrace  - Sanitizing stacktrace:
+grails.plugin.fixtures.exception.UnknownFixtureBeanException: there is no bean named 'question1' in this fixture
+	at grails.plugin.fixtures.Fixture.propertyMissing(Fixture.groovy:59)
+	at grails.plugin.fixtures.Fixture.getProperty(Fixture.groovy)
+	at exp.UserOpinionIntegrationSpec.spock_feature_1_0_closure1_closure4_closure7(UserOpinionIntegrationSpec.groovy:14)
+	at grails.spring.BeanBuilder.invokeBeanDefiningMethod(BeanBuilder.java:679)
+	at grails.spring.BeanBuilder.invokeMethod(BeanBuilder.java:550)
+	at grails.plugin.fixtures.builder.FixtureBuilder.invokeMethod(FixtureBuilder.groovy:120)
+	at exp.UserOpinionIntegrationSpec.spock_feature_1_0_closure1_closure4(UserOpinionIntegrationSpec.groovy:13)
+	at exp.UserOpinionIntegrationSpec.test save new user opinion_closure1(UserOpinionIntegrationSpec.groovy:12)
+	at exp.UserOpinionIntegrationSpec.test save new user opinion_closure1(UserOpinionIntegrationSpec.groovy)
+	at grails.spring.BeanBuilder.invokeBeanDefiningClosure(BeanBuilder.java:723)
+	at grails.spring.BeanBuilder.beans(BeanBuilder.java:573)
+	at grails.plugin.fixtures.builder.FixtureBuilder.beans(FixtureBuilder.groovy:106)
+	at grails.plugin.fixtures.Fixture.load(Fixture.groovy:39)
+	at grails.plugin.fixtures.FixtureLoader.doLoad(FixtureLoader.groovy:50)
+	at grails.plugin.fixtures.FixtureLoader.load(FixtureLoader.groovy:42)
+	at exp.UserOpinionIntegrationSpec.test save new user opinion(UserOpinionIntegrationSpec.groovy:11)
+2011-05-22 19:46:05,688 [main] ERROR StackTrace  - Sanitizing stacktrace:
+grails.plugin.fixtures.exception.UnknownFixtureBeanException: there is no bean named 'question2' in this fixture
+	at grails.plugin.fixtures.Fixture.propertyMissing(Fixture.groovy:59)
+	at grails.plugin.fixtures.Fixture.getProperty(Fixture.groovy)
+	at exp.UserOpinionIntegrationSpec.spock_feature_1_1_closure2_closure9_closure11(UserOpinionIntegrationSpec.groovy:54)
+	at groovy.lang.Closure.call(Closure.java:282)
+	at grails.spring.BeanBuilder.invokeBeanDefiningMethod(BeanBuilder.java:679)
+	at grails.spring.BeanBuilder.invokeMethod(BeanBuilder.java:550)
+	at grails.plugin.fixtures.builder.FixtureBuilder.invokeMethod(FixtureBuilder.groovy:120)
+	at groovy.lang.GroovyObjectSupport.invokeMethod(GroovyObjectSupport.java:44)
+	at exp.UserOpinionIntegrationSpec.spock_feature_1_1_closure2_closure9(UserOpinionIntegrationSpec.groovy:53)
+	at groovy.lang.Closure.call(Closure.java:282)
+	at groovy.lang.Closure.call(Closure.java:295)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions_closure2(UserOpinionIntegrationSpec.groovy:52)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions_closure2(UserOpinionIntegrationSpec.groovy)
+	at groovy.lang.Closure.call(Closure.java:282)
+	at groovy.lang.Closure.call(Closure.java:277)
+	at grails.spring.BeanBuilder.invokeBeanDefiningClosure(BeanBuilder.java:723)
+	at grails.spring.BeanBuilder.beans(BeanBuilder.java:573)
+	at grails.plugin.fixtures.builder.FixtureBuilder.beans(FixtureBuilder.groovy:106)
+	at grails.plugin.fixtures.Fixture.load(Fixture.groovy:39)
+	at grails.plugin.fixtures.FixtureLoader.doLoad(FixtureLoader.groovy:50)
+	at grails.plugin.fixtures.FixtureLoader.load(FixtureLoader.groovy:42)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions(UserOpinionIntegrationSpec.groovy:41)
+2011-05-22 19:46:05,689 [main] ERROR StackTrace  - Sanitizing stacktrace:
+grails.plugin.fixtures.exception.UnknownFixtureBeanException: there is no bean named 'question2' in this fixture
+	at grails.plugin.fixtures.Fixture.propertyMissing(Fixture.groovy:59)
+	at grails.plugin.fixtures.Fixture.getProperty(Fixture.groovy)
+	at exp.UserOpinionIntegrationSpec.spock_feature_1_1_closure2_closure9_closure11(UserOpinionIntegrationSpec.groovy:54)
+	at grails.spring.BeanBuilder.invokeBeanDefiningMethod(BeanBuilder.java:679)
+	at grails.spring.BeanBuilder.invokeMethod(BeanBuilder.java:550)
+	at grails.plugin.fixtures.builder.FixtureBuilder.invokeMethod(FixtureBuilder.groovy:120)
+	at exp.UserOpinionIntegrationSpec.spock_feature_1_1_closure2_closure9(UserOpinionIntegrationSpec.groovy:53)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions_closure2(UserOpinionIntegrationSpec.groovy:52)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions_closure2(UserOpinionIntegrationSpec.groovy)
+	at grails.spring.BeanBuilder.invokeBeanDefiningClosure(BeanBuilder.java:723)
+	at grails.spring.BeanBuilder.beans(BeanBuilder.java:573)
+	at grails.plugin.fixtures.builder.FixtureBuilder.beans(FixtureBuilder.groovy:106)
+	at grails.plugin.fixtures.Fixture.load(Fixture.groovy:39)
+	at grails.plugin.fixtures.FixtureLoader.doLoad(FixtureLoader.groovy:50)
+	at grails.plugin.fixtures.FixtureLoader.load(FixtureLoader.groovy:42)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions(UserOpinionIntegrationSpec.groovy:41)
+2011-05-22 19:47:36,371 [main] ERROR StackTrace  - Sanitizing stacktrace:
+org.hibernate.QueryException: could not resolve property: question.text of: exp.Answer
+	at org.hibernate.persister.entity.AbstractPropertyMapping.propertyException(AbstractPropertyMapping.java:67)
+	at org.hibernate.persister.entity.AbstractPropertyMapping.toColumns(AbstractPropertyMapping.java:82)
+	at org.hibernate.persister.entity.BasicEntityPropertyMapping.toColumns(BasicEntityPropertyMapping.java:54)
+	at org.hibernate.persister.entity.AbstractEntityPersister.toColumns(AbstractEntityPersister.java:1377)
+	at org.hibernate.loader.criteria.CriteriaQueryTranslator.getColumns(CriteriaQueryTranslator.java:457)
+	at org.hibernate.loader.criteria.CriteriaQueryTranslator.getColumnsUsingProjection(CriteriaQueryTranslator.java:417)
+	at org.hibernate.criterion.SimpleExpression.toSqlString(SimpleExpression.java:68)
+	at org.hibernate.criterion.Junction.toSqlString(Junction.java:82)
+	at org.hibernate.criterion.Junction.toSqlString(Junction.java:82)
+	at org.hibernate.loader.criteria.CriteriaQueryTranslator.getWhereCondition(CriteriaQueryTranslator.java:357)
+	at org.hibernate.loader.criteria.CriteriaJoinWalker.<init>(CriteriaJoinWalker.java:113)
+	at org.hibernate.loader.criteria.CriteriaJoinWalker.<init>(CriteriaJoinWalker.java:82)
+	at org.hibernate.loader.criteria.CriteriaLoader.<init>(CriteriaLoader.java:91)
+	at org.hibernate.impl.SessionImpl.list(SessionImpl.java:1577)
+	at org.hibernate.impl.CriteriaImpl.list(CriteriaImpl.java:306)
+	at grails.orm.HibernateCriteriaBuilder.invokeMethod(HibernateCriteriaBuilder.java:1163)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions(UserOpinionIntegrationSpec.groovy:69)
+2011-05-22 19:47:36,383 [main] ERROR StackTrace  - Sanitizing stacktrace:
+org.hibernate.QueryException: could not resolve property: question.text of: exp.Answer
+	at grails.orm.HibernateCriteriaBuilder.invokeMethod(HibernateCriteriaBuilder.java:1163)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions(UserOpinionIntegrationSpec.groovy:69)
+2011-05-22 20:39:24,028 [main] ERROR StackTrace  - Sanitizing stacktrace:
+grails.plugin.fixtures.exception.UnknownFixtureBeanException: there is no bean named 'question1' in this fixture
+	at grails.plugin.fixtures.Fixture.propertyMissing(Fixture.groovy:59)
+	at grails.plugin.fixtures.Fixture.getProperty(Fixture.groovy)
+	at exp.UserOpinionIntegrationSpec.spock_feature_1_0_closure1_closure4_closure7(UserOpinionIntegrationSpec.groovy:14)
+	at groovy.lang.Closure.call(Closure.java:282)
+	at grails.spring.BeanBuilder.invokeBeanDefiningMethod(BeanBuilder.java:679)
+	at grails.spring.BeanBuilder.invokeMethod(BeanBuilder.java:550)
+	at grails.plugin.fixtures.builder.FixtureBuilder.invokeMethod(FixtureBuilder.groovy:120)
+	at groovy.lang.GroovyObjectSupport.invokeMethod(GroovyObjectSupport.java:44)
+	at exp.UserOpinionIntegrationSpec.spock_feature_1_0_closure1_closure4(UserOpinionIntegrationSpec.groovy:13)
+	at groovy.lang.Closure.call(Closure.java:282)
+	at groovy.lang.Closure.call(Closure.java:295)
+	at exp.UserOpinionIntegrationSpec.test save new user opinion_closure1(UserOpinionIntegrationSpec.groovy:12)
+	at exp.UserOpinionIntegrationSpec.test save new user opinion_closure1(UserOpinionIntegrationSpec.groovy)
+	at groovy.lang.Closure.call(Closure.java:282)
+	at groovy.lang.Closure.call(Closure.java:277)
+	at grails.spring.BeanBuilder.invokeBeanDefiningClosure(BeanBuilder.java:723)
+	at grails.spring.BeanBuilder.beans(BeanBuilder.java:573)
+	at grails.plugin.fixtures.builder.FixtureBuilder.beans(FixtureBuilder.groovy:106)
+	at grails.plugin.fixtures.Fixture.load(Fixture.groovy:39)
+	at grails.plugin.fixtures.FixtureLoader.doLoad(FixtureLoader.groovy:50)
+	at grails.plugin.fixtures.FixtureLoader.load(FixtureLoader.groovy:42)
+	at exp.UserOpinionIntegrationSpec.test save new user opinion(UserOpinionIntegrationSpec.groovy:11)
+2011-05-22 20:39:24,088 [main] ERROR StackTrace  - Sanitizing stacktrace:
+grails.plugin.fixtures.exception.UnknownFixtureBeanException: there is no bean named 'question1' in this fixture
+	at grails.plugin.fixtures.Fixture.propertyMissing(Fixture.groovy:59)
+	at grails.plugin.fixtures.Fixture.getProperty(Fixture.groovy)
+	at exp.UserOpinionIntegrationSpec.spock_feature_1_0_closure1_closure4_closure7(UserOpinionIntegrationSpec.groovy:14)
+	at grails.spring.BeanBuilder.invokeBeanDefiningMethod(BeanBuilder.java:679)
+	at grails.spring.BeanBuilder.invokeMethod(BeanBuilder.java:550)
+	at grails.plugin.fixtures.builder.FixtureBuilder.invokeMethod(FixtureBuilder.groovy:120)
+	at exp.UserOpinionIntegrationSpec.spock_feature_1_0_closure1_closure4(UserOpinionIntegrationSpec.groovy:13)
+	at exp.UserOpinionIntegrationSpec.test save new user opinion_closure1(UserOpinionIntegrationSpec.groovy:12)
+	at exp.UserOpinionIntegrationSpec.test save new user opinion_closure1(UserOpinionIntegrationSpec.groovy)
+	at grails.spring.BeanBuilder.invokeBeanDefiningClosure(BeanBuilder.java:723)
+	at grails.spring.BeanBuilder.beans(BeanBuilder.java:573)
+	at grails.plugin.fixtures.builder.FixtureBuilder.beans(FixtureBuilder.groovy:106)
+	at grails.plugin.fixtures.Fixture.load(Fixture.groovy:39)
+	at grails.plugin.fixtures.FixtureLoader.doLoad(FixtureLoader.groovy:50)
+	at grails.plugin.fixtures.FixtureLoader.load(FixtureLoader.groovy:42)
+	at exp.UserOpinionIntegrationSpec.test save new user opinion(UserOpinionIntegrationSpec.groovy:11)
+2011-05-22 20:39:24,127 [main] ERROR StackTrace  - Sanitizing stacktrace:
+grails.plugin.fixtures.exception.UnknownFixtureBeanException: there is no bean named 'question1' in this fixture
+	at grails.plugin.fixtures.Fixture.propertyMissing(Fixture.groovy:59)
+	at exp.UserOpinionIntegrationSpec.spock_feature_1_1_closure2_closure8(UserOpinionIntegrationSpec.groovy:45)
+	at groovy.lang.Closure.call(Closure.java:282)
+	at grails.spring.BeanBuilder.invokeBeanDefiningMethod(BeanBuilder.java:679)
+	at grails.spring.BeanBuilder.invokeMethod(BeanBuilder.java:550)
+	at grails.plugin.fixtures.builder.FixtureBuilder.invokeMethod(FixtureBuilder.groovy:120)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions_closure2(UserOpinionIntegrationSpec.groovy:42)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions_closure2(UserOpinionIntegrationSpec.groovy)
+	at groovy.lang.Closure.call(Closure.java:282)
+	at groovy.lang.Closure.call(Closure.java:277)
+	at grails.spring.BeanBuilder.invokeBeanDefiningClosure(BeanBuilder.java:723)
+	at grails.spring.BeanBuilder.beans(BeanBuilder.java:573)
+	at grails.plugin.fixtures.builder.FixtureBuilder.beans(FixtureBuilder.groovy:106)
+	at grails.plugin.fixtures.Fixture.load(Fixture.groovy:39)
+	at grails.plugin.fixtures.FixtureLoader.doLoad(FixtureLoader.groovy:50)
+	at grails.plugin.fixtures.FixtureLoader.load(FixtureLoader.groovy:42)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions(UserOpinionIntegrationSpec.groovy:41)
+2011-05-22 20:39:24,128 [main] ERROR StackTrace  - Sanitizing stacktrace:
+grails.plugin.fixtures.exception.UnknownFixtureBeanException: there is no bean named 'question1' in this fixture
+	at grails.plugin.fixtures.Fixture.propertyMissing(Fixture.groovy:59)
+	at exp.UserOpinionIntegrationSpec.spock_feature_1_1_closure2_closure8(UserOpinionIntegrationSpec.groovy:45)
+	at grails.spring.BeanBuilder.invokeBeanDefiningMethod(BeanBuilder.java:679)
+	at grails.spring.BeanBuilder.invokeMethod(BeanBuilder.java:550)
+	at grails.plugin.fixtures.builder.FixtureBuilder.invokeMethod(FixtureBuilder.groovy:120)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions_closure2(UserOpinionIntegrationSpec.groovy:42)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions_closure2(UserOpinionIntegrationSpec.groovy)
+	at grails.spring.BeanBuilder.invokeBeanDefiningClosure(BeanBuilder.java:723)
+	at grails.spring.BeanBuilder.beans(BeanBuilder.java:573)
+	at grails.plugin.fixtures.builder.FixtureBuilder.beans(FixtureBuilder.groovy:106)
+	at grails.plugin.fixtures.Fixture.load(Fixture.groovy:39)
+	at grails.plugin.fixtures.FixtureLoader.doLoad(FixtureLoader.groovy:50)
+	at grails.plugin.fixtures.FixtureLoader.load(FixtureLoader.groovy:42)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions(UserOpinionIntegrationSpec.groovy:41)
+2011-05-22 20:57:23,084 [main] ERROR StackTrace  - Sanitizing stacktrace:
+grails.plugin.fixtures.exception.UnknownFixtureBeanException: there is no bean named 'question1' in this fixture
+	at grails.plugin.fixtures.Fixture.propertyMissing(Fixture.groovy:59)
+	at grails.plugin.fixtures.Fixture.getProperty(Fixture.groovy)
+	at exp.UserOpinionIntegrationSpec.spock_feature_1_0_closure1_closure4_closure7(UserOpinionIntegrationSpec.groovy:14)
+	at groovy.lang.Closure.call(Closure.java:282)
+	at grails.spring.BeanBuilder.invokeBeanDefiningMethod(BeanBuilder.java:679)
+	at grails.spring.BeanBuilder.invokeMethod(BeanBuilder.java:550)
+	at grails.plugin.fixtures.builder.FixtureBuilder.invokeMethod(FixtureBuilder.groovy:120)
+	at groovy.lang.GroovyObjectSupport.invokeMethod(GroovyObjectSupport.java:44)
+	at exp.UserOpinionIntegrationSpec.spock_feature_1_0_closure1_closure4(UserOpinionIntegrationSpec.groovy:13)
+	at groovy.lang.Closure.call(Closure.java:282)
+	at groovy.lang.Closure.call(Closure.java:295)
+	at exp.UserOpinionIntegrationSpec.test save new user opinion_closure1(UserOpinionIntegrationSpec.groovy:12)
+	at exp.UserOpinionIntegrationSpec.test save new user opinion_closure1(UserOpinionIntegrationSpec.groovy)
+	at groovy.lang.Closure.call(Closure.java:282)
+	at groovy.lang.Closure.call(Closure.java:277)
+	at grails.spring.BeanBuilder.invokeBeanDefiningClosure(BeanBuilder.java:723)
+	at grails.spring.BeanBuilder.beans(BeanBuilder.java:573)
+	at grails.plugin.fixtures.builder.FixtureBuilder.beans(FixtureBuilder.groovy:106)
+	at grails.plugin.fixtures.Fixture.load(Fixture.groovy:39)
+	at exp.UserOpinionIntegrationSpec.test save new user opinion(UserOpinionIntegrationSpec.groovy:11)
+2011-05-22 20:57:23,105 [main] ERROR StackTrace  - Sanitizing stacktrace:
+grails.plugin.fixtures.exception.UnknownFixtureBeanException: there is no bean named 'question1' in this fixture
+	at grails.plugin.fixtures.Fixture.propertyMissing(Fixture.groovy:59)
+	at grails.plugin.fixtures.Fixture.getProperty(Fixture.groovy)
+	at exp.UserOpinionIntegrationSpec.spock_feature_1_0_closure1_closure4_closure7(UserOpinionIntegrationSpec.groovy:14)
+	at grails.spring.BeanBuilder.invokeBeanDefiningMethod(BeanBuilder.java:679)
+	at grails.spring.BeanBuilder.invokeMethod(BeanBuilder.java:550)
+	at grails.plugin.fixtures.builder.FixtureBuilder.invokeMethod(FixtureBuilder.groovy:120)
+	at exp.UserOpinionIntegrationSpec.spock_feature_1_0_closure1_closure4(UserOpinionIntegrationSpec.groovy:13)
+	at exp.UserOpinionIntegrationSpec.test save new user opinion_closure1(UserOpinionIntegrationSpec.groovy:12)
+	at exp.UserOpinionIntegrationSpec.test save new user opinion_closure1(UserOpinionIntegrationSpec.groovy)
+	at grails.spring.BeanBuilder.invokeBeanDefiningClosure(BeanBuilder.java:723)
+	at grails.spring.BeanBuilder.beans(BeanBuilder.java:573)
+	at grails.plugin.fixtures.builder.FixtureBuilder.beans(FixtureBuilder.groovy:106)
+	at grails.plugin.fixtures.Fixture.load(Fixture.groovy:39)
+	at exp.UserOpinionIntegrationSpec.test save new user opinion(UserOpinionIntegrationSpec.groovy:11)
+2011-05-22 20:57:23,388 [main] ERROR StackTrace  - Sanitizing stacktrace:
+grails.plugin.fixtures.exception.UnknownFixtureBeanException: there is no bean named 'question1' in this fixture
+	at grails.plugin.fixtures.Fixture.propertyMissing(Fixture.groovy:59)
+	at exp.UserOpinionIntegrationSpec.spock_feature_1_1_closure2_closure8(UserOpinionIntegrationSpec.groovy:45)
+	at groovy.lang.Closure.call(Closure.java:282)
+	at grails.spring.BeanBuilder.invokeBeanDefiningMethod(BeanBuilder.java:679)
+	at grails.spring.BeanBuilder.invokeMethod(BeanBuilder.java:550)
+	at grails.plugin.fixtures.builder.FixtureBuilder.invokeMethod(FixtureBuilder.groovy:120)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions_closure2(UserOpinionIntegrationSpec.groovy:42)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions_closure2(UserOpinionIntegrationSpec.groovy)
+	at groovy.lang.Closure.call(Closure.java:282)
+	at groovy.lang.Closure.call(Closure.java:277)
+	at grails.spring.BeanBuilder.invokeBeanDefiningClosure(BeanBuilder.java:723)
+	at grails.spring.BeanBuilder.beans(BeanBuilder.java:573)
+	at grails.plugin.fixtures.builder.FixtureBuilder.beans(FixtureBuilder.groovy:106)
+	at grails.plugin.fixtures.Fixture.load(Fixture.groovy:39)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions(UserOpinionIntegrationSpec.groovy:41)
+2011-05-22 20:57:23,388 [main] ERROR StackTrace  - Sanitizing stacktrace:
+grails.plugin.fixtures.exception.UnknownFixtureBeanException: there is no bean named 'question1' in this fixture
+	at grails.plugin.fixtures.Fixture.propertyMissing(Fixture.groovy:59)
+	at exp.UserOpinionIntegrationSpec.spock_feature_1_1_closure2_closure8(UserOpinionIntegrationSpec.groovy:45)
+	at grails.spring.BeanBuilder.invokeBeanDefiningMethod(BeanBuilder.java:679)
+	at grails.spring.BeanBuilder.invokeMethod(BeanBuilder.java:550)
+	at grails.plugin.fixtures.builder.FixtureBuilder.invokeMethod(FixtureBuilder.groovy:120)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions_closure2(UserOpinionIntegrationSpec.groovy:42)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions_closure2(UserOpinionIntegrationSpec.groovy)
+	at grails.spring.BeanBuilder.invokeBeanDefiningClosure(BeanBuilder.java:723)
+	at grails.spring.BeanBuilder.beans(BeanBuilder.java:573)
+	at grails.plugin.fixtures.builder.FixtureBuilder.beans(FixtureBuilder.groovy:106)
+	at grails.plugin.fixtures.Fixture.load(Fixture.groovy:39)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions(UserOpinionIntegrationSpec.groovy:41)
+2011-05-22 21:00:28,499 [main] ERROR StackTrace  - Sanitizing stacktrace:
+grails.plugin.fixtures.exception.UnknownFixtureBeanException: there is no bean named 'question1' in this fixture
+	at grails.plugin.fixtures.Fixture.propertyMissing(Fixture.groovy:59)
+	at grails.plugin.fixtures.Fixture.getProperty(Fixture.groovy)
+	at exp.UserOpinionIntegrationSpec.spock_feature_1_0_closure1_closure4_closure7(UserOpinionIntegrationSpec.groovy:14)
+	at groovy.lang.Closure.call(Closure.java:282)
+	at grails.spring.BeanBuilder.invokeBeanDefiningMethod(BeanBuilder.java:679)
+	at grails.spring.BeanBuilder.invokeMethod(BeanBuilder.java:550)
+	at grails.plugin.fixtures.builder.FixtureBuilder.invokeMethod(FixtureBuilder.groovy:120)
+	at groovy.lang.GroovyObjectSupport.invokeMethod(GroovyObjectSupport.java:44)
+	at exp.UserOpinionIntegrationSpec.spock_feature_1_0_closure1_closure4(UserOpinionIntegrationSpec.groovy:13)
+	at groovy.lang.Closure.call(Closure.java:282)
+	at groovy.lang.Closure.call(Closure.java:295)
+	at exp.UserOpinionIntegrationSpec.test save new user opinion_closure1(UserOpinionIntegrationSpec.groovy:12)
+	at exp.UserOpinionIntegrationSpec.test save new user opinion_closure1(UserOpinionIntegrationSpec.groovy)
+	at groovy.lang.Closure.call(Closure.java:282)
+	at groovy.lang.Closure.call(Closure.java:277)
+	at grails.spring.BeanBuilder.invokeBeanDefiningClosure(BeanBuilder.java:723)
+	at grails.spring.BeanBuilder.beans(BeanBuilder.java:573)
+	at grails.plugin.fixtures.builder.FixtureBuilder.beans(FixtureBuilder.groovy:106)
+	at grails.plugin.fixtures.Fixture.load(Fixture.groovy:39)
+	at exp.UserOpinionIntegrationSpec.test save new user opinion(UserOpinionIntegrationSpec.groovy:11)
+2011-05-22 21:00:28,500 [main] ERROR StackTrace  - Sanitizing stacktrace:
+grails.plugin.fixtures.exception.UnknownFixtureBeanException: there is no bean named 'question1' in this fixture
+	at grails.plugin.fixtures.Fixture.propertyMissing(Fixture.groovy:59)
+	at grails.plugin.fixtures.Fixture.getProperty(Fixture.groovy)
+	at exp.UserOpinionIntegrationSpec.spock_feature_1_0_closure1_closure4_closure7(UserOpinionIntegrationSpec.groovy:14)
+	at grails.spring.BeanBuilder.invokeBeanDefiningMethod(BeanBuilder.java:679)
+	at grails.spring.BeanBuilder.invokeMethod(BeanBuilder.java:550)
+	at grails.plugin.fixtures.builder.FixtureBuilder.invokeMethod(FixtureBuilder.groovy:120)
+	at exp.UserOpinionIntegrationSpec.spock_feature_1_0_closure1_closure4(UserOpinionIntegrationSpec.groovy:13)
+	at exp.UserOpinionIntegrationSpec.test save new user opinion_closure1(UserOpinionIntegrationSpec.groovy:12)
+	at exp.UserOpinionIntegrationSpec.test save new user opinion_closure1(UserOpinionIntegrationSpec.groovy)
+	at grails.spring.BeanBuilder.invokeBeanDefiningClosure(BeanBuilder.java:723)
+	at grails.spring.BeanBuilder.beans(BeanBuilder.java:573)
+	at grails.plugin.fixtures.builder.FixtureBuilder.beans(FixtureBuilder.groovy:106)
+	at grails.plugin.fixtures.Fixture.load(Fixture.groovy:39)
+	at exp.UserOpinionIntegrationSpec.test save new user opinion(UserOpinionIntegrationSpec.groovy:11)
+2011-05-22 21:00:28,780 [main] ERROR StackTrace  - Sanitizing stacktrace:
+grails.plugin.fixtures.exception.UnknownFixtureBeanException: there is no bean named 'question1' in this fixture
+	at grails.plugin.fixtures.Fixture.propertyMissing(Fixture.groovy:59)
+	at exp.UserOpinionIntegrationSpec.spock_feature_1_1_closure2_closure8(UserOpinionIntegrationSpec.groovy:45)
+	at groovy.lang.Closure.call(Closure.java:282)
+	at grails.spring.BeanBuilder.invokeBeanDefiningMethod(BeanBuilder.java:679)
+	at grails.spring.BeanBuilder.invokeMethod(BeanBuilder.java:550)
+	at grails.plugin.fixtures.builder.FixtureBuilder.invokeMethod(FixtureBuilder.groovy:120)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions_closure2(UserOpinionIntegrationSpec.groovy:42)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions_closure2(UserOpinionIntegrationSpec.groovy)
+	at groovy.lang.Closure.call(Closure.java:282)
+	at groovy.lang.Closure.call(Closure.java:277)
+	at grails.spring.BeanBuilder.invokeBeanDefiningClosure(BeanBuilder.java:723)
+	at grails.spring.BeanBuilder.beans(BeanBuilder.java:573)
+	at grails.plugin.fixtures.builder.FixtureBuilder.beans(FixtureBuilder.groovy:106)
+	at grails.plugin.fixtures.Fixture.load(Fixture.groovy:39)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions(UserOpinionIntegrationSpec.groovy:41)
+2011-05-22 21:00:28,780 [main] ERROR StackTrace  - Sanitizing stacktrace:
+grails.plugin.fixtures.exception.UnknownFixtureBeanException: there is no bean named 'question1' in this fixture
+	at grails.plugin.fixtures.Fixture.propertyMissing(Fixture.groovy:59)
+	at exp.UserOpinionIntegrationSpec.spock_feature_1_1_closure2_closure8(UserOpinionIntegrationSpec.groovy:45)
+	at grails.spring.BeanBuilder.invokeBeanDefiningMethod(BeanBuilder.java:679)
+	at grails.spring.BeanBuilder.invokeMethod(BeanBuilder.java:550)
+	at grails.plugin.fixtures.builder.FixtureBuilder.invokeMethod(FixtureBuilder.groovy:120)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions_closure2(UserOpinionIntegrationSpec.groovy:42)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions_closure2(UserOpinionIntegrationSpec.groovy)
+	at grails.spring.BeanBuilder.invokeBeanDefiningClosure(BeanBuilder.java:723)
+	at grails.spring.BeanBuilder.beans(BeanBuilder.java:573)
+	at grails.plugin.fixtures.builder.FixtureBuilder.beans(FixtureBuilder.groovy:106)
+	at grails.plugin.fixtures.Fixture.load(Fixture.groovy:39)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions(UserOpinionIntegrationSpec.groovy:41)
+2011-05-22 21:02:03,023 [main] ERROR StackTrace  - Sanitizing stacktrace:
+grails.validation.ValidationException: Validation Error(s) occurred during save():
+- Field error in object 'exp.UserOpinion' on field 'answers': rejected value [[exp.Answer : 5, exp.Answer : 7, exp.Answer : 6, exp.Answer : 10, exp.Answer : 8, exp.Answer : 2, exp.Answer : 1, exp.Answer : 4, exp.Answer : 3, exp.Answer : 9]]; codes [exp.UserOpinion.answers.validator.error.exp.UserOpinion.answers,exp.UserOpinion.answers.validator.error.answers,exp.UserOpinion.answers.validator.error.java.util.Set,exp.UserOpinion.answers.validator.error,userOpinion.answers.validator.error.exp.UserOpinion.answers,userOpinion.answers.validator.error.answers,userOpinion.answers.validator.error.java.util.Set,userOpinion.answers.validator.error,exp.UserOpinion.answers.validator.invalid.exp.UserOpinion.answers,exp.UserOpinion.answers.validator.invalid.answers,exp.UserOpinion.answers.validator.invalid.java.util.Set,exp.UserOpinion.answers.validator.invalid,userOpinion.answers.validator.invalid.exp.UserOpinion.answers,userOpinion.answers.validator.invalid.answers,userOpinion.answers.validator.invalid.java.util.Set,userOpinion.answers.validator.invalid,validator.invalid.exp.UserOpinion.answers,validator.invalid.answers,validator.invalid.java.util.Set,validator.invalid]; arguments [answers,class exp.UserOpinion,[exp.Answer : 5, exp.Answer : 7, exp.Answer : 6, exp.Answer : 10, exp.Answer : 8, exp.Answer : 2, exp.Answer : 1, exp.Answer : 4, exp.Answer : 3, exp.Answer : 9]]; default message [Property [{0}] of class [{1}] with value [{2}] does not pass custom validation]
+- Field error in object 'exp.UserOpinion' on field 'survey': rejected value [null]; codes [exp.UserOpinion.survey.nullable.error.exp.UserOpinion.survey,exp.UserOpinion.survey.nullable.error.survey,exp.UserOpinion.survey.nullable.error.exp.Survey,exp.UserOpinion.survey.nullable.error,userOpinion.survey.nullable.error.exp.UserOpinion.survey,userOpinion.survey.nullable.error.survey,userOpinion.survey.nullable.error.exp.Survey,userOpinion.survey.nullable.error,exp.UserOpinion.survey.nullable.exp.UserOpinion.survey,exp.UserOpinion.survey.nullable.survey,exp.UserOpinion.survey.nullable.exp.Survey,exp.UserOpinion.survey.nullable,userOpinion.survey.nullable.exp.UserOpinion.survey,userOpinion.survey.nullable.survey,userOpinion.survey.nullable.exp.Survey,userOpinion.survey.nullable,nullable.exp.UserOpinion.survey,nullable.survey,nullable.exp.Survey,nullable]; arguments [survey,class exp.UserOpinion]; default message [Property [{0}] of class [{1}] cannot be null]
+
+	at org.codehaus.groovy.grails.orm.hibernate.metaclass.AbstractSavePersistentMethod.doInvokeInternal(AbstractSavePersistentMethod.java:149)
+	at org.codehaus.groovy.grails.orm.hibernate.metaclass.AbstractDynamicPersistentMethod.invoke(AbstractDynamicPersistentMethod.java:59)
+	at org.codehaus.groovy.grails.plugins.orm.hibernate.HibernatePluginSupport.addBasicPersistenceMethods_closure71(HibernatePluginSupport.groovy:806)
+	at org.codehaus.groovy.grails.plugins.orm.hibernate.HibernatePluginSupport.enhanceSessionFactory_closure13(HibernatePluginSupport.groovy:376)
+	at grails.plugin.fixtures.builder.processor.FixtureBeanPostProcessor.postProcessAfterInitialization(FixtureBeanPostProcessor.groovy:98)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:407)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1426)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:580)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425)
+	at org.codehaus.groovy.grails.commons.spring.DefaultRuntimeSpringConfiguration.getApplicationContext(DefaultRuntimeSpringConfiguration.java:154)
+	at grails.spring.BeanBuilder.createApplicationContext(BeanBuilder.java:582)
+	at grails.plugin.fixtures.builder.FixtureBuilder.createApplicationContext(FixtureBuilder.groovy:139)
+	at grails.plugin.fixtures.Fixture.load(Fixture.groovy:39)
+	at exp.UserOpinionIntegrationSpec.test save new user opinion(UserOpinionIntegrationSpec.groovy:11)
+2011-05-22 21:02:03,023 [main] ERROR StackTrace  - Sanitizing stacktrace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'uo': Initialization of bean failed; nested exception is grails.validation.ValidationException: Validation Error(s) occurred during save():
+- Field error in object 'exp.UserOpinion' on field 'answers': rejected value [[exp.Answer : 5, exp.Answer : 7, exp.Answer : 6, exp.Answer : 10, exp.Answer : 8, exp.Answer : 2, exp.Answer : 1, exp.Answer : 4, exp.Answer : 3, exp.Answer : 9]]; codes [exp.UserOpinion.answers.validator.error.exp.UserOpinion.answers,exp.UserOpinion.answers.validator.error.answers,exp.UserOpinion.answers.validator.error.java.util.Set,exp.UserOpinion.answers.validator.error,userOpinion.answers.validator.error.exp.UserOpinion.answers,userOpinion.answers.validator.error.answers,userOpinion.answers.validator.error.java.util.Set,userOpinion.answers.validator.error,exp.UserOpinion.answers.validator.invalid.exp.UserOpinion.answers,exp.UserOpinion.answers.validator.invalid.answers,exp.UserOpinion.answers.validator.invalid.java.util.Set,exp.UserOpinion.answers.validator.invalid,userOpinion.answers.validator.invalid.exp.UserOpinion.answers,userOpinion.answers.validator.invalid.answers,userOpinion.answers.validator.invalid.java.util.Set,userOpinion.answers.validator.invalid,validator.invalid.exp.UserOpinion.answers,validator.invalid.answers,validator.invalid.java.util.Set,validator.invalid]; arguments [answers,class exp.UserOpinion,[exp.Answer : 5, exp.Answer : 7, exp.Answer : 6, exp.Answer : 10, exp.Answer : 8, exp.Answer : 2, exp.Answer : 1, exp.Answer : 4, exp.Answer : 3, exp.Answer : 9]]; default message [Property [{0}] of class [{1}] with value [{2}] does not pass custom validation]
+- Field error in object 'exp.UserOpinion' on field 'survey': rejected value [null]; codes [exp.UserOpinion.survey.nullable.error.exp.UserOpinion.survey,exp.UserOpinion.survey.nullable.error.survey,exp.UserOpinion.survey.nullable.error.exp.Survey,exp.UserOpinion.survey.nullable.error,userOpinion.survey.nullable.error.exp.UserOpinion.survey,userOpinion.survey.nullable.error.survey,userOpinion.survey.nullable.error.exp.Survey,userOpinion.survey.nullable.error,exp.UserOpinion.survey.nullable.exp.UserOpinion.survey,exp.UserOpinion.survey.nullable.survey,exp.UserOpinion.survey.nullable.exp.Survey,exp.UserOpinion.survey.nullable,userOpinion.survey.nullable.exp.UserOpinion.survey,userOpinion.survey.nullable.survey,userOpinion.survey.nullable.exp.Survey,userOpinion.survey.nullable,nullable.exp.UserOpinion.survey,nullable.survey,nullable.exp.Survey,nullable]; arguments [survey,class exp.UserOpinion]; default message [Property [{0}] of class [{1}] cannot be null]
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:527)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:580)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425)
+	at org.codehaus.groovy.grails.commons.spring.DefaultRuntimeSpringConfiguration.getApplicationContext(DefaultRuntimeSpringConfiguration.java:154)
+	at grails.spring.BeanBuilder.createApplicationContext(BeanBuilder.java:582)
+	at grails.plugin.fixtures.builder.FixtureBuilder.createApplicationContext(FixtureBuilder.groovy:139)
+	at grails.plugin.fixtures.Fixture.load(Fixture.groovy:39)
+	at exp.UserOpinionIntegrationSpec.test save new user opinion(UserOpinionIntegrationSpec.groovy:11)
+Caused by: grails.validation.ValidationException: Validation Error(s) occurred during save():
+- Field error in object 'exp.UserOpinion' on field 'answers': rejected value [[exp.Answer : 5, exp.Answer : 7, exp.Answer : 6, exp.Answer : 10, exp.Answer : 8, exp.Answer : 2, exp.Answer : 1, exp.Answer : 4, exp.Answer : 3, exp.Answer : 9]]; codes [exp.UserOpinion.answers.validator.error.exp.UserOpinion.answers,exp.UserOpinion.answers.validator.error.answers,exp.UserOpinion.answers.validator.error.java.util.Set,exp.UserOpinion.answers.validator.error,userOpinion.answers.validator.error.exp.UserOpinion.answers,userOpinion.answers.validator.error.answers,userOpinion.answers.validator.error.java.util.Set,userOpinion.answers.validator.error,exp.UserOpinion.answers.validator.invalid.exp.UserOpinion.answers,exp.UserOpinion.answers.validator.invalid.answers,exp.UserOpinion.answers.validator.invalid.java.util.Set,exp.UserOpinion.answers.validator.invalid,userOpinion.answers.validator.invalid.exp.UserOpinion.answers,userOpinion.answers.validator.invalid.answers,userOpinion.answers.validator.invalid.java.util.Set,userOpinion.answers.validator.invalid,validator.invalid.exp.UserOpinion.answers,validator.invalid.answers,validator.invalid.java.util.Set,validator.invalid]; arguments [answers,class exp.UserOpinion,[exp.Answer : 5, exp.Answer : 7, exp.Answer : 6, exp.Answer : 10, exp.Answer : 8, exp.Answer : 2, exp.Answer : 1, exp.Answer : 4, exp.Answer : 3, exp.Answer : 9]]; default message [Property [{0}] of class [{1}] with value [{2}] does not pass custom validation]
+- Field error in object 'exp.UserOpinion' on field 'survey': rejected value [null]; codes [exp.UserOpinion.survey.nullable.error.exp.UserOpinion.survey,exp.UserOpinion.survey.nullable.error.survey,exp.UserOpinion.survey.nullable.error.exp.Survey,exp.UserOpinion.survey.nullable.error,userOpinion.survey.nullable.error.exp.UserOpinion.survey,userOpinion.survey.nullable.error.survey,userOpinion.survey.nullable.error.exp.Survey,userOpinion.survey.nullable.error,exp.UserOpinion.survey.nullable.exp.UserOpinion.survey,exp.UserOpinion.survey.nullable.survey,exp.UserOpinion.survey.nullable.exp.Survey,exp.UserOpinion.survey.nullable,userOpinion.survey.nullable.exp.UserOpinion.survey,userOpinion.survey.nullable.survey,userOpinion.survey.nullable.exp.Survey,userOpinion.survey.nullable,nullable.exp.UserOpinion.survey,nullable.survey,nullable.exp.Survey,nullable]; arguments [survey,class exp.UserOpinion]; default message [Property [{0}] of class [{1}] cannot be null]
+
+	at grails.plugin.fixtures.builder.processor.FixtureBeanPostProcessor.postProcessAfterInitialization(FixtureBeanPostProcessor.groovy:98)
+	... 4 more
+2011-05-22 21:02:03,024 [main] ERROR StackTrace  - Sanitizing stacktrace:
+grails.validation.ValidationException: Validation Error(s) occurred during save():
+- Field error in object 'exp.UserOpinion' on field 'answers': rejected value [[exp.Answer : 5, exp.Answer : 7, exp.Answer : 6, exp.Answer : 10, exp.Answer : 8, exp.Answer : 2, exp.Answer : 1, exp.Answer : 4, exp.Answer : 3, exp.Answer : 9]]; codes [exp.UserOpinion.answers.validator.error.exp.UserOpinion.answers,exp.UserOpinion.answers.validator.error.answers,exp.UserOpinion.answers.validator.error.java.util.Set,exp.UserOpinion.answers.validator.error,userOpinion.answers.validator.error.exp.UserOpinion.answers,userOpinion.answers.validator.error.answers,userOpinion.answers.validator.error.java.util.Set,userOpinion.answers.validator.error,exp.UserOpinion.answers.validator.invalid.exp.UserOpinion.answers,exp.UserOpinion.answers.validator.invalid.answers,exp.UserOpinion.answers.validator.invalid.java.util.Set,exp.UserOpinion.answers.validator.invalid,userOpinion.answers.validator.invalid.exp.UserOpinion.answers,userOpinion.answers.validator.invalid.answers,userOpinion.answers.validator.invalid.java.util.Set,userOpinion.answers.validator.invalid,validator.invalid.exp.UserOpinion.answers,validator.invalid.answers,validator.invalid.java.util.Set,validator.invalid]; arguments [answers,class exp.UserOpinion,[exp.Answer : 5, exp.Answer : 7, exp.Answer : 6, exp.Answer : 10, exp.Answer : 8, exp.Answer : 2, exp.Answer : 1, exp.Answer : 4, exp.Answer : 3, exp.Answer : 9]]; default message [Property [{0}] of class [{1}] with value [{2}] does not pass custom validation]
+- Field error in object 'exp.UserOpinion' on field 'survey': rejected value [null]; codes [exp.UserOpinion.survey.nullable.error.exp.UserOpinion.survey,exp.UserOpinion.survey.nullable.error.survey,exp.UserOpinion.survey.nullable.error.exp.Survey,exp.UserOpinion.survey.nullable.error,userOpinion.survey.nullable.error.exp.UserOpinion.survey,userOpinion.survey.nullable.error.survey,userOpinion.survey.nullable.error.exp.Survey,userOpinion.survey.nullable.error,exp.UserOpinion.survey.nullable.exp.UserOpinion.survey,exp.UserOpinion.survey.nullable.survey,exp.UserOpinion.survey.nullable.exp.Survey,exp.UserOpinion.survey.nullable,userOpinion.survey.nullable.exp.UserOpinion.survey,userOpinion.survey.nullable.survey,userOpinion.survey.nullable.exp.Survey,userOpinion.survey.nullable,nullable.exp.UserOpinion.survey,nullable.survey,nullable.exp.Survey,nullable]; arguments [survey,class exp.UserOpinion]; default message [Property [{0}] of class [{1}] cannot be null]
+
+	at grails.plugin.fixtures.builder.processor.FixtureBeanPostProcessor.postProcessAfterInitialization(FixtureBeanPostProcessor.groovy:98)
+	at grails.spring.BeanBuilder.createApplicationContext(BeanBuilder.java:582)
+	at grails.plugin.fixtures.builder.FixtureBuilder.createApplicationContext(FixtureBuilder.groovy:139)
+	at grails.plugin.fixtures.Fixture.load(Fixture.groovy:39)
+	at exp.UserOpinionIntegrationSpec.test save new user opinion(UserOpinionIntegrationSpec.groovy:11)
+2011-05-22 21:02:03,024 [main] ERROR StackTrace  - Sanitizing stacktrace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'uo': Initialization of bean failed; nested exception is grails.validation.ValidationException: Validation Error(s) occurred during save():
+- Field error in object 'exp.UserOpinion' on field 'answers': rejected value [[exp.Answer : 5, exp.Answer : 7, exp.Answer : 6, exp.Answer : 10, exp.Answer : 8, exp.Answer : 2, exp.Answer : 1, exp.Answer : 4, exp.Answer : 3, exp.Answer : 9]]; codes [exp.UserOpinion.answers.validator.error.exp.UserOpinion.answers,exp.UserOpinion.answers.validator.error.answers,exp.UserOpinion.answers.validator.error.java.util.Set,exp.UserOpinion.answers.validator.error,userOpinion.answers.validator.error.exp.UserOpinion.answers,userOpinion.answers.validator.error.answers,userOpinion.answers.validator.error.java.util.Set,userOpinion.answers.validator.error,exp.UserOpinion.answers.validator.invalid.exp.UserOpinion.answers,exp.UserOpinion.answers.validator.invalid.answers,exp.UserOpinion.answers.validator.invalid.java.util.Set,exp.UserOpinion.answers.validator.invalid,userOpinion.answers.validator.invalid.exp.UserOpinion.answers,userOpinion.answers.validator.invalid.answers,userOpinion.answers.validator.invalid.java.util.Set,userOpinion.answers.validator.invalid,validator.invalid.exp.UserOpinion.answers,validator.invalid.answers,validator.invalid.java.util.Set,validator.invalid]; arguments [answers,class exp.UserOpinion,[exp.Answer : 5, exp.Answer : 7, exp.Answer : 6, exp.Answer : 10, exp.Answer : 8, exp.Answer : 2, exp.Answer : 1, exp.Answer : 4, exp.Answer : 3, exp.Answer : 9]]; default message [Property [{0}] of class [{1}] with value [{2}] does not pass custom validation]
+- Field error in object 'exp.UserOpinion' on field 'survey': rejected value [null]; codes [exp.UserOpinion.survey.nullable.error.exp.UserOpinion.survey,exp.UserOpinion.survey.nullable.error.survey,exp.UserOpinion.survey.nullable.error.exp.Survey,exp.UserOpinion.survey.nullable.error,userOpinion.survey.nullable.error.exp.UserOpinion.survey,userOpinion.survey.nullable.error.survey,userOpinion.survey.nullable.error.exp.Survey,userOpinion.survey.nullable.error,exp.UserOpinion.survey.nullable.exp.UserOpinion.survey,exp.UserOpinion.survey.nullable.survey,exp.UserOpinion.survey.nullable.exp.Survey,exp.UserOpinion.survey.nullable,userOpinion.survey.nullable.exp.UserOpinion.survey,userOpinion.survey.nullable.survey,userOpinion.survey.nullable.exp.Survey,userOpinion.survey.nullable,nullable.exp.UserOpinion.survey,nullable.survey,nullable.exp.Survey,nullable]; arguments [survey,class exp.UserOpinion]; default message [Property [{0}] of class [{1}] cannot be null]
+
+	at grails.spring.BeanBuilder.createApplicationContext(BeanBuilder.java:582)
+	at grails.plugin.fixtures.builder.FixtureBuilder.createApplicationContext(FixtureBuilder.groovy:139)
+	at grails.plugin.fixtures.Fixture.load(Fixture.groovy:39)
+	at exp.UserOpinionIntegrationSpec.test save new user opinion(UserOpinionIntegrationSpec.groovy:11)
+Caused by: grails.validation.ValidationException: Validation Error(s) occurred during save():
+- Field error in object 'exp.UserOpinion' on field 'answers': rejected value [[exp.Answer : 5, exp.Answer : 7, exp.Answer : 6, exp.Answer : 10, exp.Answer : 8, exp.Answer : 2, exp.Answer : 1, exp.Answer : 4, exp.Answer : 3, exp.Answer : 9]]; codes [exp.UserOpinion.answers.validator.error.exp.UserOpinion.answers,exp.UserOpinion.answers.validator.error.answers,exp.UserOpinion.answers.validator.error.java.util.Set,exp.UserOpinion.answers.validator.error,userOpinion.answers.validator.error.exp.UserOpinion.answers,userOpinion.answers.validator.error.answers,userOpinion.answers.validator.error.java.util.Set,userOpinion.answers.validator.error,exp.UserOpinion.answers.validator.invalid.exp.UserOpinion.answers,exp.UserOpinion.answers.validator.invalid.answers,exp.UserOpinion.answers.validator.invalid.java.util.Set,exp.UserOpinion.answers.validator.invalid,userOpinion.answers.validator.invalid.exp.UserOpinion.answers,userOpinion.answers.validator.invalid.answers,userOpinion.answers.validator.invalid.java.util.Set,userOpinion.answers.validator.invalid,validator.invalid.exp.UserOpinion.answers,validator.invalid.answers,validator.invalid.java.util.Set,validator.invalid]; arguments [answers,class exp.UserOpinion,[exp.Answer : 5, exp.Answer : 7, exp.Answer : 6, exp.Answer : 10, exp.Answer : 8, exp.Answer : 2, exp.Answer : 1, exp.Answer : 4, exp.Answer : 3, exp.Answer : 9]]; default message [Property [{0}] of class [{1}] with value [{2}] does not pass custom validation]
+- Field error in object 'exp.UserOpinion' on field 'survey': rejected value [null]; codes [exp.UserOpinion.survey.nullable.error.exp.UserOpinion.survey,exp.UserOpinion.survey.nullable.error.survey,exp.UserOpinion.survey.nullable.error.exp.Survey,exp.UserOpinion.survey.nullable.error,userOpinion.survey.nullable.error.exp.UserOpinion.survey,userOpinion.survey.nullable.error.survey,userOpinion.survey.nullable.error.exp.Survey,userOpinion.survey.nullable.error,exp.UserOpinion.survey.nullable.exp.UserOpinion.survey,exp.UserOpinion.survey.nullable.survey,exp.UserOpinion.survey.nullable.exp.Survey,exp.UserOpinion.survey.nullable,userOpinion.survey.nullable.exp.UserOpinion.survey,userOpinion.survey.nullable.survey,userOpinion.survey.nullable.exp.Survey,userOpinion.survey.nullable,nullable.exp.UserOpinion.survey,nullable.survey,nullable.exp.Survey,nullable]; arguments [survey,class exp.UserOpinion]; default message [Property [{0}] of class [{1}] cannot be null]
+
+	at grails.plugin.fixtures.builder.processor.FixtureBeanPostProcessor.postProcessAfterInitialization(FixtureBeanPostProcessor.groovy:98)
+	... 4 more
+2011-05-22 21:02:03,331 [main] ERROR StackTrace  - Sanitizing stacktrace:
+grails.plugin.fixtures.exception.UnknownFixtureBeanException: there is no bean named 'question1' in this fixture
+	at grails.plugin.fixtures.Fixture.propertyMissing(Fixture.groovy:59)
+	at exp.UserOpinionIntegrationSpec.spock_feature_1_1_closure2_closure8(UserOpinionIntegrationSpec.groovy:45)
+	at groovy.lang.Closure.call(Closure.java:282)
+	at grails.spring.BeanBuilder.invokeBeanDefiningMethod(BeanBuilder.java:679)
+	at grails.spring.BeanBuilder.invokeMethod(BeanBuilder.java:550)
+	at grails.plugin.fixtures.builder.FixtureBuilder.invokeMethod(FixtureBuilder.groovy:120)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions_closure2(UserOpinionIntegrationSpec.groovy:42)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions_closure2(UserOpinionIntegrationSpec.groovy)
+	at groovy.lang.Closure.call(Closure.java:282)
+	at groovy.lang.Closure.call(Closure.java:277)
+	at grails.spring.BeanBuilder.invokeBeanDefiningClosure(BeanBuilder.java:723)
+	at grails.spring.BeanBuilder.beans(BeanBuilder.java:573)
+	at grails.plugin.fixtures.builder.FixtureBuilder.beans(FixtureBuilder.groovy:106)
+	at grails.plugin.fixtures.Fixture.load(Fixture.groovy:39)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions(UserOpinionIntegrationSpec.groovy:41)
+2011-05-22 21:02:03,332 [main] ERROR StackTrace  - Sanitizing stacktrace:
+grails.plugin.fixtures.exception.UnknownFixtureBeanException: there is no bean named 'question1' in this fixture
+	at grails.plugin.fixtures.Fixture.propertyMissing(Fixture.groovy:59)
+	at exp.UserOpinionIntegrationSpec.spock_feature_1_1_closure2_closure8(UserOpinionIntegrationSpec.groovy:45)
+	at grails.spring.BeanBuilder.invokeBeanDefiningMethod(BeanBuilder.java:679)
+	at grails.spring.BeanBuilder.invokeMethod(BeanBuilder.java:550)
+	at grails.plugin.fixtures.builder.FixtureBuilder.invokeMethod(FixtureBuilder.groovy:120)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions_closure2(UserOpinionIntegrationSpec.groovy:42)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions_closure2(UserOpinionIntegrationSpec.groovy)
+	at grails.spring.BeanBuilder.invokeBeanDefiningClosure(BeanBuilder.java:723)
+	at grails.spring.BeanBuilder.beans(BeanBuilder.java:573)
+	at grails.plugin.fixtures.builder.FixtureBuilder.beans(FixtureBuilder.groovy:106)
+	at grails.plugin.fixtures.Fixture.load(Fixture.groovy:39)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions(UserOpinionIntegrationSpec.groovy:41)
+2011-05-22 21:03:52,197 [main] ERROR StackTrace  - Sanitizing stacktrace:
+grails.plugin.fixtures.exception.UnknownFixtureBeanException: there is no bean named 'question1' in this fixture
+	at grails.plugin.fixtures.Fixture.propertyMissing(Fixture.groovy:59)
+	at exp.UserOpinionIntegrationSpec.spock_feature_1_1_closure2_closure8(UserOpinionIntegrationSpec.groovy:45)
+	at groovy.lang.Closure.call(Closure.java:282)
+	at grails.spring.BeanBuilder.invokeBeanDefiningMethod(BeanBuilder.java:679)
+	at grails.spring.BeanBuilder.invokeMethod(BeanBuilder.java:550)
+	at grails.plugin.fixtures.builder.FixtureBuilder.invokeMethod(FixtureBuilder.groovy:120)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions_closure2(UserOpinionIntegrationSpec.groovy:42)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions_closure2(UserOpinionIntegrationSpec.groovy)
+	at groovy.lang.Closure.call(Closure.java:282)
+	at groovy.lang.Closure.call(Closure.java:277)
+	at grails.spring.BeanBuilder.invokeBeanDefiningClosure(BeanBuilder.java:723)
+	at grails.spring.BeanBuilder.beans(BeanBuilder.java:573)
+	at grails.plugin.fixtures.builder.FixtureBuilder.beans(FixtureBuilder.groovy:106)
+	at grails.plugin.fixtures.Fixture.load(Fixture.groovy:39)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions(UserOpinionIntegrationSpec.groovy:41)
+2011-05-22 21:03:52,198 [main] ERROR StackTrace  - Sanitizing stacktrace:
+grails.plugin.fixtures.exception.UnknownFixtureBeanException: there is no bean named 'question1' in this fixture
+	at grails.plugin.fixtures.Fixture.propertyMissing(Fixture.groovy:59)
+	at exp.UserOpinionIntegrationSpec.spock_feature_1_1_closure2_closure8(UserOpinionIntegrationSpec.groovy:45)
+	at grails.spring.BeanBuilder.invokeBeanDefiningMethod(BeanBuilder.java:679)
+	at grails.spring.BeanBuilder.invokeMethod(BeanBuilder.java:550)
+	at grails.plugin.fixtures.builder.FixtureBuilder.invokeMethod(FixtureBuilder.groovy:120)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions_closure2(UserOpinionIntegrationSpec.groovy:42)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions_closure2(UserOpinionIntegrationSpec.groovy)
+	at grails.spring.BeanBuilder.invokeBeanDefiningClosure(BeanBuilder.java:723)
+	at grails.spring.BeanBuilder.beans(BeanBuilder.java:573)
+	at grails.plugin.fixtures.builder.FixtureBuilder.beans(FixtureBuilder.groovy:106)
+	at grails.plugin.fixtures.Fixture.load(Fixture.groovy:39)
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions(UserOpinionIntegrationSpec.groovy:41)
+2011-05-22 21:05:19,705 [main] ERROR StackTrace  - Sanitizing stacktrace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+uo
+|
+null
+
+	at exp.UserOpinionIntegrationSpec.test save new user opinion(UserOpinionIntegrationSpec.groovy:35)
+2011-05-22 21:05:19,706 [main] ERROR StackTrace  - Sanitizing stacktrace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+uo
+|
+null
+
+	at exp.UserOpinionIntegrationSpec.test save new user opinion(UserOpinionIntegrationSpec.groovy:35)
+2011-05-22 21:18:02,347 [main] ERROR StackTrace  - Sanitizing stacktrace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+uo
+|
+null
+
+	at exp.UserOpinionIntegrationSpec.test save new user opinion(UserOpinionIntegrationSpec.groovy:35)
+2011-05-22 21:18:02,384 [main] ERROR StackTrace  - Sanitizing stacktrace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+uo
+|
+null
+
+	at exp.UserOpinionIntegrationSpec.test save new user opinion(UserOpinionIntegrationSpec.groovy:35)
+2011-05-22 21:29:57,067 [main] ERROR StackTrace  - Sanitizing stacktrace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+1 == number
+  |  |
+  |  2
+  false
+
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions(UserOpinionIntegrationSpec.groovy:89)
+2011-05-22 21:29:57,086 [main] ERROR StackTrace  - Sanitizing stacktrace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+1 == number
+  |  |
+  |  2
+  false
+
+	at exp.UserOpinionIntegrationSpec.test query for the number of user opinions(UserOpinionIntegrationSpec.groovy:89)

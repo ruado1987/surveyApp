@@ -13,4 +13,8 @@ class UserOpinion {
             value?.size() == obj?.survey?.questions?.size()
         })
     }
+
+    static mapping = {
+        submitDate(type: 'date')
+    }
 }
