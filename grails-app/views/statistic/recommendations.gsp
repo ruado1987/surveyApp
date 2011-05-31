@@ -1,13 +1,12 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: ruado
-  Date: 5/30/11
-  Time: 12:51 PM
-  To change this template use File | Settings | File Templates.
---%>
-
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
-  <head><title>Simple GSP page</title></head>
-  <body>Place your content here</body>
+<head>
+    <title>Recommendations by Male and Female</title>
+    <meta name="layout" content="customLayout"/>
+</head>
+
+<body>
+    <g:render template="recommendationTemplate" model="['gender': 'male', 'recommendations': male]"/>
+    <g:render template="recommendationTemplate" model="['gender': 'female', 'recommendations': female]"/>
+</body>
 </html>
