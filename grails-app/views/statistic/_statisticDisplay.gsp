@@ -1,9 +1,14 @@
-<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<%
+    def columnNames = [['string', 'Gender'],['number', 'Count']]
+    def summary = "${chartTitle}".toString()
+%>
+
 <gvisualization:pieCoreChart elementId="statistic_chart"
-                             columns="${[['string', 'Gender'],['number', 'Count']]}"
-                             data="${statisticData}"
+                             columns="${columnNames}"
+                             data="${statistic}"
                              width="${400}"
                              height="${500}"
-                             title="Gender Statistic"
-                             is3D="${true}"/>
+                             title="${summary}"
+                             is3D="${true}"
+                             dynamicLoading="${true}"/>
 <div id='statistic_chart'></div>
