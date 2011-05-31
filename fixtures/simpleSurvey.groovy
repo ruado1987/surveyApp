@@ -1,8 +1,13 @@
+import exp.Survey
 
-/**
- * Created by IntelliJ IDEA.
- * User: ruado
- * Date: 5/25/11
- * Time: 10:39 PM
- * To change this template use File | Settings | File Templates.
- */
+include 'sampleQuestions'
+
+fixture {
+    survey(Survey) {
+        name = 'Survey on the need for another social network to share creative ideas'
+        questions = [question1, question2, question3,
+                question4, question5, question6,
+                question7, question8, question9,
+                question10]
+    }
+}

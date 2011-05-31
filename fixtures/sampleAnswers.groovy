@@ -1,8 +1,16 @@
+import exp.Answer
 
-/**
- * Created by IntelliJ IDEA.
- * User: ruado
- * Date: 5/30/11
- * Time: 1:27 AM
- * To change this template use File | Settings | File Templates.
- */
+include 'sampleQuestions'
+
+fixture {
+    maleAnswer(Answer, question: question1, text: 'Male')
+    femaleAnswer(Answer, question: question1, text: 'Female')
+    ageAnswer(Answer, question: question2, text: '18-22')
+
+    (1..10).each {num ->
+        "answer${num}"(Answer) {
+            question = ref("question${num}")
+            text = 'An answer'
+        }
+    }
+}

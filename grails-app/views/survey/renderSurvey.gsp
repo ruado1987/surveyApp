@@ -53,9 +53,6 @@
               padding-left: 28px;
               height: 25px;
           }
-          .customButton:hover {
-              border-color: #b2d1ff
-          }
           dl dt{
               margin-bottom: 10px;
           }

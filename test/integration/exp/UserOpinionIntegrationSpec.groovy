@@ -8,99 +8,88 @@ class UserOpinionIntegrationSpec extends IntegrationSpec {
 
     def 'test save new user opinion'() {
         setup:
-            def fixture = fixtureLoader.load('simpleSurvey').load {
-                (1..9).each {num->
-                    "answer${num}"(Answer){
-                        question = ref("question${num}")
-                        text = 'Some answer'
-                    }
-                }
-                orphanAnswer(Answer){
-                    question = noOpQuestion
-                    text = 'Another answer'
-                }
-                uo(UserOpinion){
-                    submitDate = new Date() + 9
-                    survey = survey
-                    answers = [answer1, answer2, answer3, answer4,
-                                answer5, answer6, answer7,
-                                answer8, answer9, orphanAnswer]
+        def fixture = fixtureLoader.load('simpleSurvey').load {
+            (1..9).each {num ->
+                "answer${num}"(Answer) {
+                    question = ref("question${num}")
+                    text = 'Some answer'
                 }
             }
-        when:
-            def count = UserOpinion.count()
-            def uo = UserOpinion.findBySubmitDate(new Date() + 9)
-        then:
-            0 < count
-            uo
-            uo.answers == fixture.uo.answers
-    }
-
-    def 'test query for the number of user opinions' (){
-        setup:
-            fixtureLoader.load('simpleSurvey').load {
-                simpleSurvey(Survey){
-                    name = 'A survey'
-                    questions = [
-                             question1,
-                             question2,
-                             question3,
-                             question4,
-                             question5
-                    ]
-                }
-                (2..5).each {num->
-                    "answer${num}"(Answer){
-                        question = ref("question${num}")
-                        text = 'An answer'
-                    }
-                }
-                uo1(UserOpinion){
-                    submitDate = new Date()
-                    survey = simpleSurvey
-                    answers = [
-                        new Answer(question: question1, text: 'Female'),
-                        answer2, answer3, answer4, answer5
-                    ]
-                }
-
-                uo2(UserOpinion){
-                    submitDate= new Date()
-                    survey = simpleSurvey
-                    answers = [
-                         new Answer(question: question1, text: 'Female'),
-                         answer2, answer3, answer4, answer5
-                    ]
-                }
-                uo3(UserOpinion){
-                    submitDate= new Date()
-                    survey = simpleSurvey
-                    answers = [
-                         new Answer(question: question1, text: 'Male'),
-                         answer2, answer3, answer4, answer5
-                    ]
-                }
+            orphanAnswer(Answer) {
+                question = noOpQuestion
+                text = 'Another answer'
             }
-        when:
-            def femaleAmt = countOpinionBaseOnGender('Female')
-            def maleAmt = countOpinionBaseOnGender('Male')
-        then:
-            2 == femaleAmt
-            1 == maleAmt
-    }
-
-    private countOpinionBaseOnGender(gender = 'Male'){
-        def cb = UserOpinion.createCriteria()
-        def amt = cb.count {
-                answers {
-                    and {
-                        question {
-                            eq('text', 'What is your gender?')
-                        }
-                        eq('text', gender)
-                    }
-                }
+            uo(UserOpinion) {
+                submitDate = new Date() + 9
+                survey = survey
+                answers = [answer1, answer2, answer3, answer4,
+                        answer5, answer6, answer7,
+                        answer8, answer9, orphanAnswer]
+            }
         }
-        amt
+        when:
+        def count = UserOpinion.count()
+        def uo = UserOpinion.findBySubmitDate(new Date() + 9)
+        then:
+        0 < count
+        uo
+        uo.answers == fixture.uo.answers
+    }
+
+    def 'test countBasedOnGender query'() {
+        setup:
+        fixtureLoader.load('sampleOpinions')
+        when:
+        def femaleAmt = UserOpinion.countBasedOnGender('Female').count()
+        def maleAmt = UserOpinion.countBasedOnGender('Male').count()
+        then:
+        2 == femaleAmt
+        1 == maleAmt
+    }
+
+    def 'test countBasedOnGenderAndAge query'() {
+        setup:
+        fixtureLoader.load('sampleOpinions').load {
+            uo4(UserOpinion){
+                submitDate= new Date()
+                survey= simpleSurvey
+                answers = [
+                    maleAnswer, ageAnswer, answer3, answer4, answer5
+                ]
+            }
+        }
+        when:
+        def femaleAmt = UserOpinion.countBasedOnGenderAndAge('Female', '18-22').count()
+        def maleAmt = UserOpinion.countBasedOnGenderAndAge('Male', '18-22').count()
+        then:
+        2 == femaleAmt
+        2 == maleAmt
+    }
+
+    def 'test countBasedOnQuestionAndAnswer query'() {
+        setup:
+        fixtureLoader.load('sampleOpinions').load {
+            uo4(UserOpinion){
+                submitDate= new Date()
+                survey= simpleSurvey
+                answers = [
+                    maleAnswer, ageAnswer, answer3, answer4, answer5
+                ]
+            }
+        }
+        when:
+        def femaleAmt = UserOpinion.countBasedOnQuestionAndAnswer(
+                genderQuestion: 'What is your gender?',
+                genderAnswer: 'Female',
+                ageQuestion: 'Which range includes your age?',
+                ageAnswer: '18-22').count()
+        def maleAmt = UserOpinion.countBasedOnQuestionAndAnswer(
+                genderQuestion: 'What is your gender?',
+                genderAnswer: 'Male',
+                ageQuestion: 'Which range includes your age?',
+                ageAnswer: '18-22').count()
+        then:
+        2 == femaleAmt
+        2 == maleAmt
     }
 }

@@ -9,4 +9,8 @@ class Answer {
         text blank: false
         question()
     }
+
+    static mapping = {
+        cache: 'read-only'
+    }
 }

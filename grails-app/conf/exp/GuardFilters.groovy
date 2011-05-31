@@ -12,7 +12,7 @@ class GuardFilters {
                 }
             }
         }
-        crudrelated(controller: '*', action: 'save|create|update|delete|show|list|new', find:true){
+        crudrelated(controller: '^(?!statistic).*', action: 'save|create|update|delete|show|list|new', find:true){
             before = {
                 if(controllerName == 'survey' && actionName == 'saveUserOpinion'){
                     return true
