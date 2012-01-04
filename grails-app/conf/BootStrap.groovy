@@ -6,7 +6,7 @@ class BootStrap {
 
     def init = { servletContext ->
         if(Environment.current == Environment.DEVELOPMENT && System.properties.testData){
-            fixtureLoader.load('simpleSurvey')
+            fixtureLoader.load(System.properties.testData)
         }
     }
     def destroy = {
