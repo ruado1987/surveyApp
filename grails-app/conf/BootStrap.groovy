@@ -8,8 +8,10 @@ class BootStrap {
     def init = { servletContext ->
         if(Environment.current == Environment.DEVELOPMENT && System.properties.testData){
             fixtureLoader.load(System.properties.testData)
-            new Settings(propKey:'adminKey',propValue:'210787').save(failOnError: true)
         }
+        if(Settings.count()==0){
+    		new Settings(propKey:'adminKey',propValue:'210787').save(failOnError: true)
+    	}
     }
     def destroy = {
     }
