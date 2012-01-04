@@ -16,3 +16,10 @@ To logout, go http://localhost:8080/surveyApp/survey/logout
 
 This is different than the initial accessToken based auth design.
 The flag is put in HTTP session, so you don't have to pass the token everywhere.
+
+
+Load initital data
+==================
+http://localhost:8080/surveyApp/survey/login?pwd=<thePassword>
+then
+http://localhost:8080/surveyApp/survey/load/<fileName>

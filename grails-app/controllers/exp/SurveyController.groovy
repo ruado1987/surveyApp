@@ -3,6 +3,7 @@ package exp
 class SurveyController {
 
     static scaffold = true
+    def fixtureLoader
 
     def login = {
     	if(params.pwd==Settings.findByPropKey('adminKey').propValue){
@@ -18,6 +19,12 @@ class SurveyController {
         flash.message = "Log out"
     	session.admin=false
     	redirect(uri:"/")
+    }
+    
+    def load = {
+    	if(params.id&&session.admin)
+    		fixtureLoader.load(params.id)
+    	redirect(uri:"/")	
     }
 
     def index = {
