@@ -6,7 +6,7 @@ class GuardFilters {
         surveyRelated(controller: 'survey', action: 'renderSurvey|saveUserOpinion|thanks') {
             before = {
                 if((!params.id && !params.surveyId) && !params.opinionId){
-                    log.warn "User requested for action: ${actionName} in an inappropriate way"
+                    log.warn "User requested for action: survey/${actionName} in an inappropriate way"
                     redirect(uri: '/')
                     return false
                 }
@@ -18,7 +18,7 @@ class GuardFilters {
                     return true
                 }else{
                     if(params.accessToken != '210787'){
-                        log.warn "User requested for action: ${actionName} of controller: ${controllerName} in an inappropriate way"
+                        log.warn "User requested for action: ${controllerName}/${actionName} in an inappropriate way"
                         flash.message = 'You do not have permission to access to administrator area'
                         redirect(uri:'/')
                         return false
