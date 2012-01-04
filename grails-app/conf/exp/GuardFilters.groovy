@@ -17,7 +17,7 @@ class GuardFilters {
                 if(controllerName == 'survey' && actionName == 'saveUserOpinion'){
                     return true
                 }else{
-                    if(params.accessToken != '210787'){
+                    if(!session.admin){
                         log.warn "User requested for action: ${controllerName}/${actionName} in an inappropriate way"
                         flash.message = 'You do not have permission to access to administrator area'
                         redirect(uri:'/')

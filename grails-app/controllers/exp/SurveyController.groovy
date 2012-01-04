@@ -4,6 +4,21 @@ class SurveyController {
 
     static scaffold = true
 
+    def login = {
+    	if(params.pwd==Settings.findByPropKey('adminKey').propValue){
+    		flash.message = "login successfully"
+    		session.admin=true
+    	}else{
+    		flash.message = "Invalid passcode"
+    		session.admin=false
+    	}
+    	redirect(uri:"/")
+    }
+    def logout ={
+        flash.message = "Log out"
+    	session.admin=false
+    	redirect(uri:"/")
+    }
 
     def index = {
         redirect(action: 'renderSurvey', id: 1)
