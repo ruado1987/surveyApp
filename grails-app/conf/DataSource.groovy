@@ -1,7 +1,7 @@
 dataSource {
     pooled = true
-//    driverClassName = "org.h2.Driver"
-    driverClassName = "com.p6spy.engine.spy.P6SpyDriver" // use this driver to enable p6spy logging
+    driverClassName = "org.h2.Driver"
+//    driverClassName = "com.p6spy.engine.spy.P6SpyDriver" // use this driver to enable p6spy logging
     username = "sa"
     password = ""
 }

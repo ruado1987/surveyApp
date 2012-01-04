@@ -6,6 +6,7 @@
         <link rel="shortcut icon" href="${resource(dir:'images',file:'favicon.ico')}" type="image/x-icon" />
         <g:layoutHead />
         <g:javascript library="application" />
+        <r:layoutResources />
     </head>
     <body>
         <div id="spinner" class="spinner" style="display:none;">
@@ -13,5 +14,6 @@
         </div>
         <div id="grailsLogo"><a href="http://grails.org"><img src="${resource(dir:'images',file:'grails_logo.png')}" alt="Grails" border="0" /></a></div>
         <g:layoutBody />
+        <r:layoutResources />
     </body>
 </html>
