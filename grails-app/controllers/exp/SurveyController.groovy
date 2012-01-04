@@ -62,7 +62,7 @@ class SurveyController {
         if(result) {
              redirect(action: 'thanks', params: [opinionId: uo.id])
         }else{
-             flash.message = 'Please choose a survey or provide answers for all questions'
+             flash.message = 'Please provide answers for all questions'
              render(view: 'renderSurvey', model: [survey: survey])
         }
     }

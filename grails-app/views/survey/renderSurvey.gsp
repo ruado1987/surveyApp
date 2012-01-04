@@ -65,7 +65,9 @@
   </head>
   <body>
         <span class="headerMsg">Your are taking a survey: ${survey?.name}</span>
-        <span class="headerMsg1">Please take your valuable time to answer the following questions</span>
+        <p><br/>
+        <span class="headerMsg1">Please take your valuable time to answer all of the following questions</span>
+        </p>
         <g:if test="${flash.message}">
             <p class="errorMsg">${flash.message}</p>
         </g:if>
