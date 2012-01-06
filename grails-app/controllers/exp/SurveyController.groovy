@@ -3,7 +3,29 @@ package exp
 class SurveyController {
 
     static scaffold = true
+    def fixtureLoader
 
+    def login = {
+    	if(params.pwd==Settings.findByPropKey('adminKey').propValue){
+    		flash.message = "login successfully"
+    		session.admin=true
+    	}else{
+    		flash.message = "Invalid passcode"
+    		session.admin=false
+    	}
+    	redirect(uri:"/")
+    }
+    def logout ={
+        flash.message = "Log out"
+    	session.admin=false
+    	redirect(uri:"/")
+    }
+    
+    def load = {
+    	if(params.id&&session.admin)
+    		fixtureLoader.load(params.id)
+    	redirect(uri:"/")	
+    }
 
     def index = {
         redirect(action: 'renderSurvey', id: 1)
@@ -47,7 +69,7 @@ class SurveyController {
         if(result) {
              redirect(action: 'thanks', params: [opinionId: uo.id])
         }else{
-             flash.message = 'Please choose a survey or provide answers for all questions'
+             flash.message = 'Please provide answers for all questions'
              render(view: 'renderSurvey', model: [survey: survey])
         }
     }
