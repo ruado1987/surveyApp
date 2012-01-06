@@ -8,6 +8,7 @@
     <blueprint:resources/>
     <g:layoutHead/>
     <g:javascript library="application"/>
+    <r:layoutResources />
 </head>
 
 <body>
@@ -35,5 +36,6 @@
         </dd>
     </div>
 </div>
+<r:layoutResources />
 </body>
 </html>

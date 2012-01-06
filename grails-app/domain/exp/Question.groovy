@@ -8,7 +8,7 @@ class Question {
     static hasMany = [options: String]
 
     static constraints = {
-        text blank: false, unique: true
+        text blank: false, unique: false
         options()
     }
 }

@@ -1,4 +1,5 @@
 import grails.util.Environment
+import exp.Settings
 
 class BootStrap {
 
@@ -6,8 +7,11 @@ class BootStrap {
 
     def init = { servletContext ->
         if(Environment.current == Environment.DEVELOPMENT && System.properties.testData){
-            fixtureLoader.load('simpleSurvey')
+            fixtureLoader.load(System.properties.testData)
         }
+        if(Settings.count()==0){
+    		new Settings(propKey:'adminKey',propValue:'210787').save(failOnError: true)
+    	}
     }
     def destroy = {
     }
