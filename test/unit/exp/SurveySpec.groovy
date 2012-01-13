@@ -1,38 +1,59 @@
 package exp
 
-import grails.plugin.spock.UnitSpec
+import grails.test.mixin.TestFor
 
-class SurveySpec extends UnitSpec {
+@TestFor(Survey)
+class SurveySpec extends spock.lang.Specification {
 
     def "test constraints on scalar value"() {
         setup:
-            def questionList = []
-            (1..5).each {
-                questionList << new Question(text: "This is a question ${it}")
-            }
-            mockForConstraintsTests Survey, [new Survey(name: 'a unique survey', questions: questionList)]
-        when:
+            def questionList = createQuestionList()
+            mockForConstraintsTests Survey, [createSurvey('a unique survey')]
             def survey = new Survey(name: value)
-            def result = survey.validate()
+        when:            
+            survey.validate()
         then:
-            assert valid == result, "Validation result of _${value}_ is not as expected"
-            validator == survey.errors['name']
+            validateConstraint(validator, survey, 'name')                        
         where:
-            value << ['', 'A survey', null, 'a unique survey']
-            valid << [false, true, false, false]
-            validator << ['blank', null, 'nullable', 'unique']
+            value               | validator
+            ''                  | 'blank'
+            'A survey'          | null
+            'a unique survey'   | 'unique'
     }
 
     def "test constraints on collection values" () {
         setup:
             mockForConstraintsTests Survey
-        when:
-            def survey = new Survey(name: 'a Survey', questions: questions)
-            def result = survey.validate()
+            def survey = createSurvey('a survey', questions)
+        when:                        
+            survey.validate()
         then:
-            !result
-            'minSize' == survey.errors['questions']
-        where:
+            validateConstraint('minSize', survey, 'questions')                        
+        where:            
             questions << [[], [new Question(text: 'A Question')]]
+    }
+
+    private Survey createSurvey(String name) {
+        new Survey(name: 'a unique survey', questions: createQuestionList())
+    }
+
+    private Survey createSurvey(String name, List questions) {
+        new Survey(name: name, questions: questions)
+    }
+
+    private List createQuestionList() {
+        def questionList = []
+        (1..5).each {
+            questionList << new Question(text: "This is a question ${it}")
+        }
+
+        questionList
+    }
+
+    private void validateConstraint(String validator, ouv, String fieldName) {
+        if(validator == 'valid')
+            assert ouv.errors["${fieldName}"] == null
+        else    
+            assert ouv.errors["${fieldName}"] == validator
     }
 }
