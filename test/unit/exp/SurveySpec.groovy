@@ -34,7 +34,7 @@ class SurveySpec extends spock.lang.Specification {
     }
 
     private Survey createSurvey(String name) {
-        new Survey(name: 'a unique survey', questions: createQuestionList())
+        new Survey(name: name, questions: createQuestionList())
     }
 
     private Survey createSurvey(String name, List questions) {
