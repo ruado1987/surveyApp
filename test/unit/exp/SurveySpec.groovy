@@ -3,7 +3,7 @@ package exp
 import grails.test.mixin.TestFor
 
 @TestFor(Survey)
-class SurveySpec extends spock.lang.Specification {
+class SurveySpec extends AbstractConstraintSpec {
 
     def "test constraints on scalar value"() {
         setup:
@@ -50,10 +50,4 @@ class SurveySpec extends spock.lang.Specification {
         questionList
     }
 
-    private void validateConstraint(String validator, ouv, String fieldName) {
-        if(validator == 'valid')
-            assert ouv.errors["${fieldName}"] == null
-        else    
-            assert ouv.errors["${fieldName}"] == validator
-    }
 }

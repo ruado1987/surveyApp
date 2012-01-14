@@ -1,22 +1,23 @@
 package exp
 
-import grails.plugin.spock.UnitSpec
+import grails.test.mixin.TestFor
 
-class QuestionSpec extends UnitSpec {
+@TestFor(Question)
+class QuestionSpec extends AbstractConstraintSpec {
 
-    def "test constraints on scalar values"() {
+    def "test constraints on question text"() {
         setup:
             mockForConstraintsTests Question, [new Question(text: 'duplicate')]
-        when:
             def question = new Question(text: value)
+        when:
             def result = question.validate()
         then:
-            result == valid
-            validator == question.errors['text']
+	    validateConstraint(validator, question, 'text')	
         where:
-            value << ['', null, 'q1', 'duplicate']
-            valid << [false, false, true, false]
-            validator << ['blank', 'nullable', null, 'unique']
+	    value 	| validator
+	    ''	  	| 'blank'
+	    null  	| 'nullable'
+	    'q1'  	| 'valid'
     }
 
     /*def "test constraints on collection values" () {

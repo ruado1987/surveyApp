@@ -16,12 +16,12 @@ class StatisticController {
         return [statisticColNames: statColNames, statisticData: statData]
     }
 
-    def getAllRecommendations = {
+    def getAllRecommendations() {
         def stat = statisticService.allRecommendations()
         render(view: 'recommendations', model: stat)
     }
 
-    def showQuestionsSelection = {
+    def showQuestionsSelection() {
         def questions = Question.findAll('\
                     from Question q \
                     where :yes = any elements(q.options) \
@@ -30,7 +30,7 @@ class StatisticController {
         render(view: 'questionsSelection', model: [questions: questions])
     }
 
-    def yesNoStatistic = {
+    def yesNoStatistic() {
         def q = Question.get(params.questionId)
         if (q) {
             def statistic = statisticService.countOpinionsByQuestion(q.text, 'Yes')
