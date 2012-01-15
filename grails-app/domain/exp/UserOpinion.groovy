@@ -22,7 +22,7 @@ class UserOpinion {
     static mapping = {
         submitDate(type: 'date')
     }
-
+    
     static namedQueries = {
         countBasedOnGender {gender ->
             answers {

@@ -11,8 +11,8 @@ class StatisticService {
 
     @Transactional(readOnly = true)
     def countOpinionBasedOnGender() {
-        def femaleAmt = UserOpinion.countBasedOnGender('Female').count()
-        def maleAmt = UserOpinion.countBasedOnGender('Male').count()
+        def femaleAmt = amountOf('Female') 
+        def maleAmt   = amountOf('Male') 
         return [female: femaleAmt, male: maleAmt]
     }
 
@@ -44,9 +44,8 @@ class StatisticService {
         def maleCount = UserOpinion.executeQuery(sql,
                 [genderQuestion: GENDER_QUESTION, gender: 'Male',
                  targetQuestion: question, targetAnswer: answer])
-        assert femaleCount
-        assert maleCount
-        [female: femaleCount[0], male: maleCount[0]]
+       
+	[female: femaleCount[0], male: maleCount[0]]
     }
 
     private def recommendationsOf(def gender) {
@@ -63,4 +62,16 @@ class StatisticService {
                 [genderQuestion: GENDER_QUESTION, genderAnswer: gender,
                         suggestionQuestion: SUGGESTION_QUESTION])
     }
+
+    private int amountOf(String gender) {
+	def genderNumber = UserOpinion.where {
+		answers {
+			text == gender && 
+			question {
+				text == 'What is your gender?'
+			}
+		}
+    	}
+	genderNumber.count()	
+    }	
 }
