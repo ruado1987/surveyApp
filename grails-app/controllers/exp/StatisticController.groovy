@@ -49,7 +49,7 @@ class StatisticController {
     }
 
     private def buildStatisticModel(Map statisticMap) {
-                    def statData = []
+        def statData = []
             statisticMap.each {k, v ->
                 if (k =~ /^[Ff]emale.*/) {
                     statData << ['Female', v]

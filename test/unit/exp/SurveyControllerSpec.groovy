@@ -1,45 +1,48 @@
 package exp
 
-import grails.plugin.spock.ControllerSpec
+import spock.lang.Specification
+import grails.test.mixin.*
 
-class SurveyControllerSpec extends ControllerSpec {
+@TestFor(SurveyController)
+@Mock([Question, Survey, UserOpinion])
+class SurveyControllerSpec extends Specification {
 
     def 'test newSurvey'() {
-        setup:
-            mockDomain Question
         when:
             controller.newSurvey()
-        then:
-            'newSurvey' == renderArgs.view
-             renderArgs.model.questionList != null
+        
+	then:
+            view == '/survey/newSurvey'
+            model.questionList != null
     }
 
-    def 'test saveSurvey'() {
+    def 'test successful save of survey should redirect to the show survey page'() {
         setup:
-            mockDomain Survey
-            controller.params.name='A survey'
+	    def questions = questionList()*.save(flush: true);
+	    controller.params.name='A survey'
         //Grails will automatically populate the questions association of the Survey domain class using the list of identifiers
-            controller.params.questions = [1,2,3,4,5]
-        when:
+            controller.params.questions = questions.id 
+	when:
             controller.saveSurvey()
-        then:
-            'show' == redirectArgs.action
-            redirectArgs.id
+        
+	then:
+	    response.redirectUrl == '/survey/show'
     }
 
     def 'test saveSurvey with invalid data' () {
         setup:
-            mockDomain Survey
-            mockDomain Question
             controller.params.name = name
             controller.params.questions = questions
-        when:
+        
+	when:
             controller.saveSurvey()
+       
         then:
-            'newSurvey' == renderArgs.view
-            renderArgs.model.questionList != null
-            renderArgs.model.surveyObj != null
-        where:
+            view == '/survey/newSurvey'
+            model.questionList != null
+            model.surveyObj != null
+        
+	where:
             name << ['', 'a new survey']
             questions << [[1,2,3,4,5], [1,2,3]]
     }
@@ -48,61 +51,66 @@ class SurveyControllerSpec extends ControllerSpec {
         when:
             controller.index()
         then:
-            'renderSurvey' == redirectArgs.action
-            1 == redirectArgs.id
+	    response.redirectUrl == '/survey/renderSurvey/1'
     }
 
     def 'test render survey action' (){
         setup:
-            mockDomain Survey, [new Survey(id: 1, name: 'a survey', questions: questionList())]
-            controller.params.id=1
-        when:
+	    new Survey(id: 1, name: 'a survey', questions: questionList()).save(flush: true)
+        
+	when:
+	    controller.params.id=1
             def model = controller.renderSurvey()
-        then:
+        
+	then:
             model['survey']
     }
 
     def 'test render survey action when no survey is found'(){
         setup:
-            mockDomain Survey, [new Survey(id: 1, name: 'a survey', questions: questionList())]
-            controller.params.id=2
-        when:
+	    new Survey(id: 1, name: 'a survey', questions: questionList()).save(flush: true)
+        
+	when:	    
+	    controller.params.id=2
             def model = controller.renderSurvey()
-        then:
+
+	then:
             controller.flash.message
-            '/' == redirectArgs.uri
+	    response.redirectUrl == '/'
     }
 
     def 'test save user opinion action'(){
         setup:
-            mockDomain UserOpinion
-            mockDomain Survey, [new Survey(id: 1, name: 'a survey', questions: questionList())]
-            mockDomain Question, questionList()
-            controller.params.'answer_1' = 'some text'
+	    questionList()*.save(flush: true)
+            new Survey(id: 1, name: 'a survey', questions: Question.list()).save(flush: true)	    
+	    
+	    controller.params.'answer_1' = 'some text'
             controller.params.'answer_2' = 'another text'
             controller.params.'answer_3' = 'fuzzy text'
             controller.params.'answer_4' = 'sloppy text'
             controller.params.'answer_5' = 'stressful text'
             controller.params.surveyId = 1
-        when:
+        
+	when:
             controller.saveUserOpinion()
-        then:
-            'thanks' == redirectArgs.action
-            redirectArgs.params.opinionId
+        
+	then:
+	    assert response.redirectUrl =~ /\/survey\/thanks?.*/
     }
 
     def 'test save user opinion action with problems'() {
          setup:
-            mockDomain UserOpinion
-            mockDomain Survey, [new Survey(id: 1, name: 'a survey', questions: questionList())]
-            mockDomain Question, questionList()
-            controller.params.surveyId = 1
-         when:
+	    questionList()*.save(flush: true)
+            new Survey(id: 1, name: 'a survey', questions: Question.list()).save(flush: true)
+
+	 when:
+	    controller.params.surveyId = 1
             controller.saveUserOpinion()
-         then:
-            'renderSurvey' == renderArgs.view
+         
+	 then:
+            view == '/survey/renderSurvey'
+	    model.survey
             controller.flash.message
-            renderArgs.model.survey
     }
 
     def 'test extract answers from params map' () {
@@ -119,10 +127,14 @@ class SurveyControllerSpec extends ControllerSpec {
     }
 
     def 'test thanks action'() {
+	setup:
+	    views['/survey/_thanks.gsp'] = "thanks"
+
         when:
             controller.thanks()
-        then:
-            'thanks' == renderArgs.template
+    
+	then:
+	    response.text == "thanks"
     }
 
     private questionList() {

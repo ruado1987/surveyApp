@@ -46,7 +46,7 @@ class UserOpinionSpec extends UnitSpec {
             validator == uo.errors['answers']
         where:
             answers << [answerList(), [], emptyAnswerList(),
-                        answerList() << new Answer(
+		            answerList() << new Answer(
                             text: 'a reply',
                             question: new Question(text: 'a question'))
             ]

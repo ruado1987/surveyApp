@@ -72,6 +72,6 @@ class StatisticService {
 			}
 		}
     	}
-	genderNumber.count()	
+	genderNumber.count()
     }	
 }

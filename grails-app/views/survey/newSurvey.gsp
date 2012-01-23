@@ -2,7 +2,7 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
   <head>
-      <title>Simple GSP page</title>
+      <title>Create New Survey</title>
       <meta name="layout" content="main">
   </head>
   <body>
@@ -26,7 +26,7 @@
                         <label for="questions">Choose from the available questions</label>
                         <g:select name="questions" from="${questionList}"
                                   multiple="yes" optionKey="id"
-                                  optionValue="text" onclick="alert(this.options[this.selectedIndex].text)"/>
+                                  optionValue="text" />
                     </dt>
                     <dt>
                         <g:submitButton name="submit" value="Save Survey"/>
